@@ -422,7 +422,8 @@ ul
 {
     margin: 0 auto;
     width: 278px;
-    height: 39px;   
+    height: 39px;
+    text-align: center;
 }
 .achiev__item
 {
