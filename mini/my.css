@@ -1,0 +1,306 @@
+.wrapper
+        {
+            width:100%;
+        }
+.content
+        {
+            position:relative;
+            width: 1000px;
+            height: 800px;
+            margin:0 auto;
+            background-image: url(img/map.png);
+            background-size: cover;        
+        }
+.char
+        {
+            position:absolute;
+            display:inline-block;
+            left:-10px;
+            top:504px;
+            width:179px;
+            height:172px;
+        }
+.right-side
+        {
+            transform:scale(-1, 1);
+        }
+.img-char::selection
+        {
+            color:transparent;
+        }
+#health
+{
+    position:absolute;
+    top:765px;
+    left:27px;
+    width:150px;
+    height:30px;
+    background-color: red;
+    color: white;  
+}
+#health h3:nth-child(1)
+{
+    margin:0;
+    position:absolute;
+    left:10px;
+    top:3px;
+}
+#health h3:nth-child(2)
+{
+    margin:0;
+    position:absolute;
+    left:45px;
+    top:3px; 
+}
+#health-empty
+{
+    position:absolute;
+    top:765px;
+    left:27px;
+    height:30px;
+    width:150px;
+    background-color: black;
+}
+#count-flask, #count-shield
+{
+    color:white;  
+    position:absolute;
+    top:38px;
+    margin-left:5px;
+}
+
+#sword h2, #heal-flask h2, #shield h2
+{
+    position:absolute;
+    top:-16px;
+    color:#fff319;
+    margin-left:5px;
+}
+#spells-all div
+{
+    display:inline-block;
+    border:3px solid black;
+    border-radius:5px;
+    margin: 2px;
+}
+#spells-all img
+{
+    width:70px;
+}
+#spells-all
+{
+    position:absolute;
+    top:680px;
+    left:25px;   
+}
+
+.trink-flask
+{
+    width:80px;
+    height:150px;
+    background-image:url(img/heal-flask.gif);
+    position:absolute;
+    left:30px;
+    top:-180px;
+}
+.effect-shield
+{
+    width:80px;
+    height:80px;
+    position:absolute;
+    top:680px;
+    left:300px;
+}
+.use-shield
+{
+    
+    background-image:url(img/shield-effect.gif);
+    background-size: cover; 
+}
+
+.dead
+{
+    top: -300px;
+    position: absolute;
+}
+.walk
+{
+    animation-name:aniWalk;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+.valhalla
+{
+    position:absolute;
+    top:-504px;
+    left:-60px;
+    width:300px;
+    height:665px;     
+}
+.valhalla-anim
+{
+    background-image: linear-gradient(to right, transparent, rgba( 255, 234, 142, 0.6 ), transparent);
+    opacity:0%;
+    animation: animValhalla 1s linear 1 forwards;
+}
+.enemy-char
+{
+    width:200px;
+    height:250px;
+    position:relative;
+    left:500px;
+    top:403px;
+}
+.enemy-walk
+{
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+/*
+    position: relative;
+    left: 500px;
+    top: 403px;
+*/
+    background-size: cover;
+    animation: aniWalkGhost 1s linear infinite;
+}
+.enemy-attack
+{
+    width:200px;
+    height:250px;
+    position:absolute;
+    left:700px;
+    top:403px;
+    background-size:cover;
+    animation:aniAttackGhost 3s linear infinite; 
+}
+.enemy-stop
+{
+    background-size:cover;
+    background-image: url(
+    img/stayghost.png);
+}
+#health-empty-enemy
+{
+    position:absolute;
+    top:765px;
+    left:800px;
+    height:30px;
+    width:150px;
+    background-color: black;
+}
+#health-enemy
+{
+    position:absolute;
+    top:765px;
+    left:800px;
+    height:30px;
+    width:150px;
+    background-color: red;
+    color:white;
+}
+
+#health-enemy h3:nth-child(1)
+{
+    margin:0;
+    position:absolute;
+    left:10px;
+    top:3px;
+}
+#health-enemy h3:nth-child(2)
+{
+    margin:0;
+    position:absolute;
+    left:45px;
+    top:3px; 
+}
+@keyframes animValhalla
+{
+    100%
+    {
+        opacity:100%;
+    }
+}
+@keyframes aniAttackGhost
+{
+    0%
+    {
+        background-image: url(img/kickghost1.png);      
+    }
+    19%
+    {
+        background-image: url(img/kickghost1.png);
+    }
+    20%
+    {
+       background-image: url(img/kickghost2.png); 
+    }
+    34%
+    {
+       background-image: url(img/kickghost2.png); 
+    }
+    35%
+    {
+       background-image: url(img/stayghost.png);  
+    }
+    100%
+    {
+       background-image: url(img/stayghost.png);  
+    }
+}
+@keyframes aniWalk
+{
+    0%
+    {
+        background-image: url(img/stay.png);
+    }
+    49%
+    {
+        background-image: url(img/stay.png);
+    }
+    50%
+    {
+        background-image: url(img/step1.png);
+    }
+    99%
+    {
+        background-image: url(img/step1.png);
+    }
+    100%
+    {
+        background-image: url(img/stay.png);
+    }
+}
+
+@keyframes aniWalkGhost
+{
+    0%
+    {
+        background-image: url(img/ghost.png);
+    }
+    49%
+    {
+        background-image: url(img/ghost.png);
+    }
+    50%
+    {
+        background-image: url(img/ghost2.png);
+    }
+    99%
+    {
+        background-image: url(img/ghost2.png);
+    }
+    100%
+    {
+        background-image: url(img/ghost.png);
+    }
+}
+
+@keyframes aniDead
+{
+    100%
+    {
+        transform:rotate(-90deg);
+        top:530px;
+    }
+}
