@@ -60,12 +60,17 @@ ul
     font-weight: 700;
     font-size: 16px;
     display: flex;
-    
 }
 .header__menu ul li
 {
     margin: 0 0 0 20px;
 }
+.header__menu ul li a:hover
+{
+    transition-duration: 300ms;
+    color: #a0a0a0;
+}
+
 .header__menu ul li a img    
 {
     margin: 0 0 3px 3px;
@@ -83,6 +88,11 @@ ul
     color: white;
     border: 2px solid #FFFFFF;
     cursor: pointer;
+}
+.btn:hover
+{
+    transition-duration: 300ms;
+    opacity: 0.5;
 }
 .btn a
 {
@@ -595,6 +605,11 @@ ul
 {
     fill: white;
 }
+.footer__icon svg:hover path
+{
+    transition-duration: 300ms;
+    fill: #a8fe4d;
+}
 .footer__content
 {
    
@@ -604,6 +619,11 @@ ul
 { 
     display: flex;
     margin: 257px 0 0 136px;
+}
+.footer__menu ul li:hover
+{
+    transition-duration: 300ms;
+    opacity: 0.7;
 }
 .footer__menu ul:nth-child(2)
 {
@@ -772,6 +792,7 @@ ul
     }
     .techno__btn
     {
+        width: 220px;
         margin: 0 auto;
         margin-top: 40px;
     }
