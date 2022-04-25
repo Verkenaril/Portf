@@ -1,0 +1,969 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+}
+ul
+{
+    list-style-type: none;
+}
+#page
+{
+    width:1600px;
+    margin: 0 auto;
+}
+.greeter
+{
+    background-image: url(image/Mask%20Group.png);
+    background-repeat: no-repeat;
+    background-size :cover;
+    height: 939px;
+}
+.content
+{
+    width: 1360px;
+    margin: 0 auto;
+}
+#header
+{
+    display:flex;
+    justify-content: space-between;
+    background: rgba(33, 33, 33, 0.3);
+    box-shadow: 0px 4px 12px rgba(24, 9, 96, 0.1);
+    height: 80px;
+}
+#header__burger-menu
+{
+    display: none;
+    position: absolute;
+}
+.header__logo
+{
+    width: 207px;
+    height: 52px;
+    margin: 7px 0px 0 120px;
+}
+.header__menu
+{
+    margin: 28px 0 0 0;
+}
+.header__menu ul
+{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    
+}
+.header__menu ul li
+{
+    margin: 0 0 0 20px;
+}
+.header__menu ul li a img    
+{
+    margin: 0 0 3px 3px;
+}
+.btn
+{
+    border-radius: 6px; 
+    width: 160px;
+    height: 42px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+}
+.btn a
+{
+    display: block;
+    margin: 10px 0 0 0;   
+}
+.header__btn
+{
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    margin: 19px 120px 0 0;
+}
+.greeter__description
+{
+    margin: 147px 0 0 0;
+}
+.greeter__title
+{
+    width: 640px;
+    height: 120px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 60px;
+    color: white;
+}
+.greeter__text
+{
+    width: 551px;
+    height: 156px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: white;
+    margin: 16px 0 0 0;
+}
+.greeter__text-media
+{
+    display: none;
+}
+.greeter__btn-more
+{
+    display: inline-block;
+    margin: 40px 24px 0 0;
+}
+.greeter__btn-contact
+{
+    display: inline-block;
+    margin: 40px 0 0 0;
+    background-color: #06B25F;
+    border: 2px solid #06B25F;
+}
+.title
+{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    color: #194484;
+}
+.techno
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+}
+.techno__title
+{
+    margin: 109px 0 0 0;
+}
+.techno__text
+{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 38px;
+    width: 898px;
+    text-align: center;
+    margin: 60px 0 0 0;
+}
+.techno__text span:first-child
+{
+    color: #00A4E8;
+    font-weight: 700;
+}
+.techno__text span:last-child
+{
+    color: #205ab1;
+    font-weight: 700;
+}
+.icon
+{
+    width: 64px;
+    height: 64px;
+    box-shadow: 0px 4px 12px rgba(41, 24, 111, 0.2);
+    border-radius: 16px;
+    display: inline-block;
+}
+.techno__app
+{
+    margin: 30px 0 0 0;
+}
+.techno__android
+{
+    background-color: #06B25F;
+}
+.techno__android div
+{
+    width: 32.8px;
+    height: 40px;
+    background-image: url(image/android.svg);
+    margin: 12px 0px 12px 16px;
+}
+.techno__apple
+{
+    background-color: #276ED8;
+    margin:0 80px;
+}
+.techno__apple div
+{
+    width: 31.16px;
+    height: 38px;
+    background-image: url(image/apple.svg);
+    margin: 12px 0px 0px 16px;
+}
+.techno__unity
+{
+    background-color: #84B5FF;
+}
+.techno__unity div
+{
+    width: 35.47px;
+    height: 40px;
+    background-image: url(image/unity.svg);
+    margin: 12px 12px 0px 12px;
+}
+.techno__text-application
+{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 38px;
+    color: #242424;
+    margin: 30px 0 0 0;
+}
+.techno__review
+{
+    display: flex;
+    width: 898px; 
+    height: 138px;
+    box-shadow: 0px 3px 16px 2px rgba(29, 51, 107, 0.15);
+    border-radius: 16px;
+    margin: 120px 0 0 0;
+}
+.techno__logo
+{
+    margin: 29px 0 0 33px;
+    width: 132px;
+    height: 74px;
+}
+.techno__items
+{
+    display: flex;
+    align-items: center;
+    margin: 0px 0 0 100px;
+}
+.techno__score
+{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 38px;
+}
+.techno__star
+{
+    margin:0 5px;
+    background-image: url(image/Star%201.svg);
+    width: 24px;
+    height: 24px;
+    color: #06B25F;
+}
+.techno__count-score
+{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+.techno__btn
+{
+    background-color: #06B25F;
+    width: 220px;
+    height: 42px;
+    margin: 48px 33px 0 90px;
+}
+.services
+{
+    margin: 120px 0 0 0;
+}
+.services__content
+{
+    width: 1131px;
+}
+.services__title
+{
+    text-align: center;
+}
+.services__card-game
+{
+    margin: 102px 0 0 0;
+}
+.card-title
+{
+    color: #0D6EB7;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    display: block;
+}
+.services__text
+{
+    width: 553px;
+    height: 269px; 
+    display: inline-block;
+}
+.services__card-game img
+{
+    margin: 0 0 0 24px;
+    width: 550px;
+    height: 395px;
+}
+.services__card-game .services__text
+{
+    margin: 102px 0 0 0;
+}
+.card-text
+{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #242424;
+}
+.card
+{
+    display: flex;
+    
+}
+.services__card-sdk .services__text
+{
+    margin: 70px 0 0 0;
+}
+.services__card-sdk img
+{
+    margin: 41px 24px 0 0;
+    width: 550px;
+    height: 395px;
+}
+.services__card-3d img
+{
+    margin: 0 0 0 25px;
+    width: 550px;
+    height: 395px;
+}
+.services__card-3d .services__text
+{
+    margin: 40px 0 0 0;
+}
+.services__card-vr .services__text
+{
+    margin: 51px 0 0 0;
+}
+.services__card-vr img
+{
+    margin: 0 28px 0 0;
+    width: 550px;
+    height: 395px;
+}
+.looking
+{
+    background-image: url(image/LOOKING%20FOR%20A%20PARTNER%20Section.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 635px;
+}
+.looking__title
+{
+    color: white;
+    text-align: center;
+    padding: 200px 0 0 0;
+}
+.looking__text
+{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: white;
+    margin: 16px 0 0 0;
+}
+
+.looking_btn
+{
+    width: 160px;
+    background-color: white;
+    height: 42px;
+    margin: 0 auto;
+    margin-top: 36px;
+}
+.looking_btn a
+{
+   color: #06B25F; 
+}
+.achiev__title 
+{
+    margin: 0 auto;
+    width: 278px;
+    height: 39px;   
+}
+.achiev__item
+{
+    display: flex;
+    margin: 100px 0 0 0;
+    justify-content: center;
+}
+.achiev__item img
+{
+    margin: 0 24px 0 0;
+}
+.achiev__item img:last-child
+{
+    margin: 0;
+}
+.contacs
+{
+    width: 1131px;
+}
+.contacs__title
+{
+    width: 201px;
+    height: 39px; 
+    margin: 0 auto;
+    margin-top: 264px;
+}
+.contacs__text
+{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #242424;
+    margin: 60px 0 0 0;
+}
+.contacs__sub-text
+{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #242424;
+    margin: 20px 0 0 0;
+}
+.contacs__item
+{
+    margin: 108px 0 0 0;
+    display: flex;
+}
+.contacs_link
+{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+.contacs__icon
+{
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 0 21px 24px 0;
+    vertical-align: top;
+}
+.contacs__info div:nth-child(1) .contacs__icon
+{
+    background-image: url(image/Vector.svg);   
+}
+.contacs__info div:nth-child(2) .contacs__icon
+{
+    background-image: url(image/Vector-5.svg);  
+}
+.contacs__info div:nth-child(3) .contacs__icon
+{
+    background-image: url(image/Vector-3.svg);  
+}
+.contacs__info div:nth-child(4) .contacs__icon
+{
+    background-image: url(image/Vector-2.svg);  
+}
+.contacs__info div:nth-child(5) .contacs__icon
+{
+    background-image: url(image/Vector-4.svg);  
+}
+.contacs__info div:nth-of-type(6) .contacs__icon
+{
+    background-image: url(image/Vector-1.svg);  
+}
+.contacs__form 
+{
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 16px 2px rgba(29, 51, 107, 0.15);
+    border-radius: 6px;
+    width: 420px;
+    height: 400px;
+    margin: 0 0 0 189px;
+}
+
+.contacs__form input, .contacs__form textarea
+{
+    width: 339px;
+    display: block;
+    border: 1px solid #D7D7D7;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 10px 0 11px 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #A9A9A9;
+    outline: none;
+}
+.contacs__form input:nth-child(1)
+{
+    margin: 50px 41px 0 40px;
+}
+.contacs__form input:nth-child(2)
+{
+    margin: 20px 41px 0 40px;
+    
+}
+.contacs__form textarea
+{
+    margin: 20px 41px 0 40px;
+    resize: none;
+    height: 80px;
+}
+.contacs__btn
+{
+    display: block;
+    background: #2DA531;
+    margin: 0 auto;
+    width: 339px;
+    height: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.footer
+{
+    background-image: url(image/FOOTER_02.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 171px 0 0 0;
+}
+.footer img
+{
+    width: 201px;
+    height: 51px;
+    margin: 234px 0 0 0;
+}
+.footer__link
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 255px;
+}
+.footer__icon
+{
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    margin: 45px 45px 0 0;
+    
+}
+.footer__icon svg
+{
+    width: 40px;
+    height: 40px;
+}
+.footer__icon svg path
+{
+    fill: white;
+}
+.footer__content
+{
+   
+    display: flex;
+}
+.footer__menu
+{ 
+    display: flex;
+    margin: 257px 0 0 136px;
+}
+.footer__menu ul:nth-child(2)
+{
+    margin: 0 0 0 58px;
+}
+.footer__menu ul:nth-child(3)
+{
+    margin: 0 0 0 82px;
+}
+.footer__menu ul:nth-child(4)
+{
+    margin: 0 0 0 121px;
+}
+
+.footer__menu ul li
+{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 18px 0;
+}
+
+.footer__menu ul li:first-child, #footer__portfo, #footer__blog
+{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 21px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 385px)
+{
+    #page
+    {
+        width: 380px;
+    }
+    .content
+    {
+        width: 380px;
+    }
+    .greeter
+    {
+        background-size: cover;
+        background-image: url("image/Mask%20Group%20(2).png");
+        background-position: -280px 0px;
+        height: 400px;
+    }
+    #header__burger-menu
+    {
+        display: block;
+        width: 24px;
+        top: 30px;
+        left: 320px;
+    }
+    .header__menu
+    {
+        display: none;
+    }
+    .header__btn
+    {
+        display: none;
+    }
+    .btn
+    {
+        width: 146px;
+    }
+    .greeter__btn-more
+    {
+        margin-left: 30px;
+    }
+    .header__logo
+    {
+        margin-left: 32px;
+    }
+    .greeter__description
+    {
+        margin: 48px 0 0 0;
+    }
+    .greeter__title
+    {
+        width: 320px;
+        height: 76px;
+        font-size: 24px;
+        line-height: 38px;
+        margin: 0 auto;
+    }
+    .greeter__text
+    {
+        display: none;
+    }
+    .greeter__text-media
+    {
+        display: block;
+        width: 324px;
+        height: 286px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        color: #242424;
+        margin: 0 auto;
+    }
+    .techno__review
+    {
+        margin-top: 80px;
+    }
+    .title
+    {
+        font-size: 22px;
+        line-height: 24px;
+    }
+    .techno__title
+    {
+        width: 162px;
+        height: 38px;
+        font-size: 22px;
+    }
+    .techno__text
+    {
+        width: 320px;
+        height: 115px;
+        font-size: 18px;
+        text-align: center;
+        line-height: 28px;
+        margin: 23px 0 0 0;
+    }
+    .techno__app
+    {
+        margin: 24px 0 0 0;
+    }
+    
+    .techno__apple
+    {
+        margin: 0 50px;
+    }
+    .techno__text-application
+    {
+        width: 320px;
+        height: 81px;
+        font-size: 18px;
+        text-align: center;
+        line-height: 28px;
+    }
+    .techno__review
+    {
+        flex-direction: column;
+        width: 320px;
+        height: 294px;
+    }
+    .techno__logo
+    {
+        margin: 0 auto;
+        margin-top: 31px;
+    }
+    .techno__items
+    {
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .techno__btn
+    {
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    .services__content
+    {
+        width: 320px;
+    }
+    .card
+    {
+        flex-direction: column;
+        justify-content: center;
+        width: 320px;
+    }
+    .card-text
+    {
+        width: 320px;
+        height: auto;
+    }
+    .card-title
+    {
+        font-size: 18px;
+        line-height: 38px;
+        text-align: center;
+    }
+    .services__card-game .services__text
+    {
+        margin: 0;
+    }
+    .services__card-game
+    {
+        margin: 40px 0 0 0;
+    }
+    .services__card-game img
+    {
+        width: 320px;
+        height: auto;
+        margin: 0;
+    }
+    .services__card-sdk img
+    {
+        width: 320px;
+        height: auto;
+        margin: 0;
+        order: 1;
+    }
+    .services__card-3d img
+    {
+        width: 320px;
+        height: auto;
+        margin: 0;
+    }
+    
+    .services__card-vr img
+    {
+        width: 320px;
+        height: auto;
+        margin: 0;
+        order: 1;
+    }
+    .looking
+    {
+        height: 400px;
+        background-position: -267px 0px;
+    }
+    .looking__title
+    {
+        font-size: 24px;
+        line-height: 38px; 
+        padding: 0px;
+/*        width: 321px;*/
+        padding: 0px;
+        padding-top: 85px;
+        text-align: center;
+/*        margin: 0 auto;*/
+    }
+    .looking__text
+    {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        margin: 12px 0 0 0;
+    }
+    .looking_btn
+    {
+        margin: 0 auto;
+        margin-top: 24px;
+    }
+    .achiev__item
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .achiev__item img
+    {
+        width: 322px;
+        height: 400px;
+        margin: 0;
+        margin-bottom: 42px;
+    }
+    .contacs
+    {
+        width: 320px;
+    }
+    .contacs__title
+    {
+        width: 116px;
+        height: 24px;
+    }
+    .contacs__text
+    {
+        font-size: 18px;
+        line-height: 28px;
+        margin-top 14px;
+    }
+    .contacs__sub-text
+    {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .contacs__item
+    {
+        flex-direction: column;
+    }
+    .contacs_link
+    {
+        margin-bottom: 24px;
+    }
+    .contacs__icon
+    {
+        margin: 0 21px 0 0; 
+    }
+    .contacs__form
+    {
+        width: 320px;
+        margin: 67px 0 0 0;
+    }
+    .contacs__form input, .contacs__form textarea
+    {
+        width: 275px;
+        margin-left: 23px;
+    }
+    .contacs__form input:nth-child(1), .contacs__form input:nth-child(2)
+    {
+        margin-left: 23px;
+    }
+    .contacs__btn
+    {
+        width: 275px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .footer
+    {
+        background-position: -478px 0px;
+    }
+    .footer__content
+    {
+        flex-direction: column;
+    }
+    .footer__content img
+    {
+        display: block;
+        margin: 0 auto;
+        margin-top: 234px;
+    }
+    .footer__link
+    {
+        width: 380px;
+        justify-content: center;
+    }
+    .footer__icon, .footer__icon svg
+    {
+        width: 32px;
+        height: 32px;
+    }
+   
+    .footer__icon
+    {
+        margin-right: 40px;
+    }
+    .footer__icon:last-child
+    {
+        margin-right: 0px;
+    }
+    .footer__menu
+    {
+        flex-direction: column;
+        margin: 67px 0 0 15px;
+    }
+    .footer__menu ul:nth-child(2), .footer__menu ul:nth-child(3), .footer__menu ul:nth-child(4)
+    {
+        margin: 0;
+    }
+    
+}
