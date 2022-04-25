@@ -1,0 +1,587 @@
+*
+{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+a
+{
+    text-decoration: none;
+}
+ul
+{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+li
+{
+    padding:0;
+    margin:0;
+}
+#content
+{
+    width:1300px;
+    margin: 0 auto;
+    position: relative;
+}
+#header
+{
+    display:flex;
+    justify-content:space-between;
+    margin:20px 0;
+    max-width:1240px;
+    box-shadow: 0px 0px 30px -16px black;
+    height: 40px;
+    align-items: center;
+}
+#header a
+{
+    color: black;
+}
+#b-img
+{
+    background-image: url(other/asus.svg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    width:100px;
+    height:20px;
+    transition:0.5s;
+    margin:0 150px 0 20px;
+    cursor:pointer;
+}
+#b-img:hover
+{
+    background-image: url(other/asus2.svg); 
+}
+#header_menu
+{
+    display:flex;
+    justify-content:center;
+}
+#header_menu li
+{
+    text-align:center;
+    width:auto;
+    border-bottom:2px solid #dbdbdb;
+    margin:0 30px;
+}
+#header_menu li:first-child
+{
+    border-bottom:2px solid black;
+}
+#header_menu li:hover
+{
+    transition:0.5s;
+    border-bottom:2px solid black;
+}
+hr
+{
+    color: #dbdbdb;
+}
+#fon-main
+{
+    background-image: url(other/fon4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+#main
+{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 300px;
+    letter-spacing: 0.5px;
+}
+#smartfon
+{
+    position: relative;
+}
+.level-one
+{
+    margin: 0 0 16px 20px;
+    padding: 2px 6px 0px 6px;
+    border: 2px solid transparent;
+    position: relative;
+    transition: 0.5s;
+    cursor: default;
+    background-color: #202020;
+    height: 35px;
+    min-width: 152px;
+    width: 170px;
+    font-size: 18px;
+/*    font-family: 'Kanit', sans-serif;*/
+    font-family: 'Bebas Neue', cursive;
+/*    font-family: 'Heebo', sans-serif;*/
+}
+
+.level-two
+{
+    opacity: 0;
+    display: none;
+    border: 2px solid transparent;
+    margin: 0px 0 0 70px;
+    padding: 5px 6px 4px 6px;
+    text-align: center;
+    width: 250px;
+    transition:1s;
+}
+.on-minis
+{
+    border: 2px solid transparent;
+}
+
+.mod-color-line
+{
+    position:absolute;
+    background-color: #f6ad59;
+    transition-timing-function: ease-out;
+}
+.over-line, .under-line, .over-line2, .under-line2
+{
+    margin: 0 0 0 70px;
+    height: 2px;
+    width: 0px;
+}
+.over-line2, .under-line2
+{
+    right: 0px;
+}
+.left-line, .right-line, .left-line2, .right-line2
+{
+    height: 34px;
+}
+
+.under-line
+{
+    top: 33px; 
+}
+.left-line
+{
+    width: 0px;
+    transition-duration: 200ms;
+}
+.right-line
+{
+    right: 0px;
+    width: 0px;
+}
+
+.over-line2
+{
+    top: 21px;
+}
+.under-line2
+{
+    top: 53px;
+}
+.right-line2
+{
+    top: -24px;
+    right: 3px;
+    width: 0px;
+}
+.left-line2
+{
+    top: 21px;
+    right: 248px;
+    width: 0px; 
+}
+
+
+
+.level-two-void-pos
+{
+    position: absolute;
+    left: 148px;
+}
+.level-two-void-pos:nth-child(2)
+{
+    padding: 20px 0 0 0;
+}
+.void-minis-position
+{
+    position: absolute;
+    left: 265px;
+    top: 0px;
+}
+#void-minis-ROG-5s
+{
+    top: -24px; 
+}
+#void-ROG-5
+{
+    top: -2px;
+}
+#void-zenfone-7-ZS670KS
+{
+    top: -2px;
+}
+#void-zenfone-8-ZS590KS
+{
+    top: -2px;
+}
+.bground-position
+{
+    position: absolute;
+    width: 790px;
+    height: 1000px;
+    left: 25px;
+    top: -238px;
+    z-index: -1; 
+}
+#ROG-5-bground
+{
+    background-image: linear-gradient( to right, transparent, #c53652, #330305);
+}
+#ROG-5s-bground
+{ 
+    background-image: linear-gradient( to right, transparent, #0849a3, #970000);
+}
+#zenfone-7-ZS670KS-bground
+{
+    background-image: linear-gradient( to right, transparent, #01819a, #031a40);
+}
+#zenfone-8-ZS590KS-bground
+{
+    background-image: linear-gradient( to right, transparent, #0078ab, #002b31); 
+}
+#zenfone-8-ZS672KS-bground
+{
+    background-image: linear-gradient( to right, transparent, #f6ad59, #133a55); 
+}
+
+.description:hover
+{
+    transition-duration: 0.5s; 
+    box-shadow: 11px 7px 0px 0px #202020;
+}
+.level-one:hover
+{
+    background-color: #f6ad59;
+}
+.level-one:hover .level-two
+{
+    display:block;
+    animation: animOpac 0.5s linear 0s 1 forwards, animBor 2s linear 0s infinite forwards;
+}
+
+.level-one:hover .left-line
+{
+    width: 2px;
+    transform: translate( 70px, 0 );
+}
+.level-one:hover .under-line, .level-one:hover .over-line
+{
+    transition-duration: 500ms;
+    transition-delay: 200ms;
+    width: 250px;
+}
+.level-one:hover .right-line
+{
+    width: 2px;
+    transition-delay: 700ms;
+    transition-duration: 90ms;
+}
+.level-one:hover .right-line2
+{
+    width: 2px;
+    transform: translate( 3px, 45px );
+    transition-delay: 790ms;
+    transition-duration: 90ms;
+}
+.level-one:hover .over-line2, .level-one:hover .under-line2
+{
+    height: 2px;
+    width: 250px;
+    transition-delay: 880ms;
+    transition-duration: 500ms;    
+}
+.level-one:hover .left-line2
+{
+    width: 2px;
+    transition-delay: 1380ms;
+    transition-duration: 90ms;
+}
+.level-two:hover
+{
+    background-color: #f6ad59;
+}
+.level-two:hover .minis-position
+{
+    display: block;
+    animation: animOpac 0.5s linear 0s 1 forwards;
+}
+
+.on-minis:hover
+{
+    transition: 0.5s;
+    background-color: #616161;
+    border: 2px solid #f6ad59;
+}
+.on-minis:hover .all-bigs
+{
+    display:block;
+    animation: animOpac 0.5s linear 0s 1 forwards;
+}
+.on-minis:hover .all-bigs img
+{
+    display:block;
+    animation: animBig 0.5s ease 0s 1 forwards;
+}
+.on-minis:hover .description
+{
+    display:block;
+    animation: animDesc 0.5s ease 0s 1 forwards, animOpac 0.5s linear 0s 1 forwards;
+}
+
+#minis-7-ZS670KS
+{
+    top: -51px;
+}
+#minis-8-ZS590KS
+{
+    top: -102px;
+}
+#minis-8-ZS672KS
+{
+    top: -132px;
+}
+#minis-ROG-5s
+{
+    top: -7px;
+}
+.minis-position
+{
+    opacity: 0;
+    display: none;
+    position: absolute;
+    left: 50px;
+    padding: 0 0 0 50px;
+}
+
+.description
+{
+
+/*    box-shadow: 11px 7px 0px 0px #202020;*/
+    opacity: 0;
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 5px;
+    margin: 0 0 0 315px;
+    width: 270px;
+    text-align: left;
+    line-height: 25px;
+    transition-duration: 0.5s;
+    color: white;
+    transform: translate( 0, 560px );
+    background-color: rgba(0, 0, 0, 0.77);
+}
+#smartfon
+{
+    color: white;
+}
+
+.all-bigs
+{
+    opacity: 0;
+    display:none;
+    position:absolute;
+    top: -260px;
+    left: 100px;
+    padding:260px 0 260px 0;
+}
+
+.all-bigs img
+{
+    margin: 0 90px 0 50px;
+    height: 300px;
+    transform: translate( 0, -200px);
+}
+#first-mini-ROG-5 .big-img img
+{
+    margin: 0 90px 0 50px;
+    height: 300px;
+}
+#first-big-ROG-5s img
+{
+    height: 300px;
+}
+.all-bigs img
+{
+    margin: 0 250px 0 50px;
+    height: 300px;
+}
+
+#second-mini-ROG-5 .all-bigs img, #thrid-mini-ROG-5 .all-bigs img
+{
+    margin: 0 250px 0 50px;
+    height: 300px;
+}
+
+#void-open
+{
+    position: absolute;
+    top: 500px;
+    left: 0px; 
+    width: 150px;
+    height: 180px;
+}
+#open
+{
+    position: absolute;
+    bottom: 0px;
+    left: 21px;
+    background-color: #202020;
+    width: 170px;
+    height: 35px;
+    cursor: default;
+    color: white;
+    margin: 0 0 0 15px;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    transition-duration: 500ms;
+    transform: rotate(-90deg);
+    transform-origin: 0% 100%;
+    transition-delay: 500ms;
+}
+
+#wrap-footer
+{
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 143px;
+    left: 144px;
+    transition-duration: 500ms;
+}
+
+#void-open:hover #open
+{
+    
+    background-color: #f6ad59;
+    transform: rotate(0deg);
+    transition-timing-function: cubic-bezier(1,-0.01,.88,.67);
+}
+#footer
+{
+    position: absolute;
+    left: -144px;
+    top: 40px;
+    background-color: #272727;
+    width: 1300px;
+    height: 400px;
+    border: 2px solid transparent;
+    transition-duration: 500ms;
+}
+
+#footer ul
+{
+    border: 2px solid transparent;
+    flex-basis: 195px;
+    flex-grow: 1;
+    transition-duration: 1s;
+}
+#info_products
+{
+    padding: 5px 20px 5px 20px;
+    display: flex;
+    justify-content: space-around;
+}
+#footer li:first-child
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+#footer li
+{
+    border: 2px solid transparent;
+    border-image-source: linear-gradient(90deg, #15723D, #1ac262);
+    border-image-width: 0px;
+    border-image-slice: 70;
+    padding: 4px 0 4px 8px;
+    margin: 0px 0;
+    transition:  0.5s;
+}
+#footer li a
+{
+    transition-duration: 1s;
+    font-family: 'Montserrat', sans-serif;
+/*    color: #15723D;*/
+    color: #f6ad59;
+}
+#footer li a:not(a:first-child)
+{
+    font-weight: 500;
+}
+#footer ul:hover
+{
+    transition-duration: 0.5s;
+}
+#footer ul:hover li a
+{
+    color: #4bc780;
+}
+#footer li:hover
+{
+    border-image-source: linear-gradient(90deg, #00913e 40%, transparent 60%);
+    border-image-width: 50px;
+    border-image-slice: 70;
+}
+#footer ul li:hover a
+{
+    transition-duration: 0.5s;
+    color: white;
+}
+#void-open:hover #wrap-footer
+{
+    
+    width: 1300px;
+    height: 415px;
+    border-radius: 0;
+    transform:translate( -144px, 0);
+    transition-delay: 1000ms;
+}
+#void-open:hover #footer
+{
+    transition-delay: 1000ms;
+    transform:translate( 144px, 0);
+}
+
+@keyframes animOpac
+{
+    100%
+    {
+        background-color: #272727;
+        opacity: 1;
+    }
+}
+@keyframes animBig
+{
+    100%
+    {
+        transform: translate( 0, 0);
+/*        top: -260px;*/
+    }
+}
+@keyframes animDesc
+{
+    100%
+    {
+        transform: translate( 0, 260px);
+        /*        top:260px;*/
+    }
+}
+@keyframes animOpac
+{
+    100%
+    {
+        opacity: 1;
+    }
+}
