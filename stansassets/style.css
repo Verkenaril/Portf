@@ -801,7 +801,7 @@ ul
     }
     .title
     {
-        font-size: 22px;
+        font-size: 26px;
         line-height: 24px;
     }
     .techno__title
@@ -883,6 +883,10 @@ ul
     .services__card-game .services__text
     {
         margin: 0;
+    }
+    .services__text
+    {
+        font-size: 19px;
     }
     .services__card-game
     {
