@@ -435,10 +435,7 @@ ul
 {
     margin: 0 24px 0 0;
 }
-.achiev__item img:last-child
-{
-    margin: 0;
-}
+
 .contacs
 {
     width: 1131px;
@@ -660,9 +657,110 @@ ul
     text-transform: uppercase;
 }
 
-
-@media (max-width: 917px)
+@media (max-width: 1026px)
 {
+    #page
+    {
+        width: 1020px;
+    }
+   .content
+    {
+        width: 960px;
+    }
+    .greeter
+    {
+        background-position: -80px, 0;
+        height: 820px;
+    }
+    .header__logo
+    {
+        margin: 7px 0px 0 20px;
+    }
+    .header__menu ul
+    {
+       flex-wrap: wrap;
+    }
+    .header__menu
+    {
+        margin: 20px 0 0 0;
+    }
+    .header__menu ul li
+    {
+        width: 150px;
+        flex-grow: 1;
+        margin: 0 0 5px 20px;
+    }
+    .header__btn
+    {
+        margin: 19px 25px 0 0;
+    }
+    .btn
+    {
+        width: 270px;
+    }
+    .techno__app 
+    {
+        margin: 30px 0 0 0;
+        width: 360px;
+    }
+    .techno__btn
+    {
+        width: 235px;
+    }
+    .achiev__item
+    {
+        flex-wrap: wrap;
+    }
+    .achiev__item img 
+    {
+        margin: 0 24px 20px 0;
+    }
+    .contacs_link
+    {
+        margin: 0 0 15px 0;
+    }
+    .contacs__icon
+    { 
+        margin : 0
+    }
+    .services 
+    {
+        margin: 120px 0 90px 0;
+    }
+    .services__text
+    {
+        height: 450px;
+    }
+    .footer__menu
+    {
+        margin: 257px 0 0 0px;
+    }
+    .footer__menu ul:nth-child(2)
+    {
+        margin: 0 0 0 0px;
+    }
+    .footer__menu ul:nth-child(3) 
+    {
+        margin: 0 0 0 30px;
+    }
+    .footer__menu ul:nth-child(4) 
+    {
+        margin: 0 0 0 30px;
+    }
+    
+}
+
+
+@media (max-width: 914px)
+{
+    #page
+    {
+        width: 910px;
+    }
+    .content
+    {
+        width: 855px;
+    }
     .greeter__title
     {
         width: 840px;
@@ -674,19 +772,38 @@ ul
         font-size: 23px;
         line-height: 32px;
     }
+    .greeter__description 
+    {
+        margin: 75px 0 0 0;
+    }
     .btn
     {
         width: 265px;
         height: 45px;
-        font-size: 19px;
+        font-size: 15px;
+    }
+    .header__btn 
+    {
+        margin: 19px 13px 0 0;
     }
     .techno__review
     {
-        width: 925px;
+        width: 850px;
+    }
+    .techno__items
+    {
+        width: 395px;
     }
     .services__content 
     {
-        width: 1235px;
+        width: 910px;
+    }
+    .card
+    {
+        flex-direction: column;
+        justify-content: center;
+        width: 95%;
+        margin: 0 auto;
     }
     .card-text
     {
@@ -698,6 +815,35 @@ ul
         height: 420px;
         width: 660px;
     }
+    .services__card-game img
+    {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .services__card-sdk img
+    {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        order: 1;
+    }
+    .services__card-3d img
+    {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .services__card-vr img
+    {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        order: 1;
+    }
+    
+    
     .looking_btn a
     {
         font-size: 22px;
@@ -708,15 +854,29 @@ ul
     }
     .contacs
     {
-        width: 1290px;
+        width: 910px;
+    }
+    .contacs__title
+    {
+        width: 175px;
+        margin-bottom: 25px;
     }
     .contacs__text
     {
         font-size: 28px;
+        width: 780px;
+        margin: 0 auto;
+        margin-bottom: 20px;
     }
     .contacs__sub-text
     {
         font-size: 23px;
+        width: 650px;
+        margin: 0 auto;
+    }
+    .contacs__item 
+    {
+        margin: 108px 25px 0 25px;
     }
 }
 
@@ -725,7 +885,7 @@ ul
 {
     #page
     {
-        width: 520px;
+        width: 530px;
     }
     .content
     {
@@ -821,7 +981,7 @@ ul
     }
     .techno__app
     {
-        margin: 24px 0 0 0;
+        margin: 25px 0 0 70px;
     }
     
     .techno__apple
@@ -849,8 +1009,7 @@ ul
     }
     .techno__items
     {
-        margin: 0 auto;
-        margin-top: 30px;
+        margin: 10px 0 0 65px;
     }
     .techno__btn
     {
@@ -974,11 +1133,13 @@ ul
         font-size: 18px;
         line-height: 28px;
         margin-top: 14px;
+        width: 430px;
     }
     .contacs__sub-text
     {
         font-size: 16px;
         line-height: 26px;
+        width: 330px;
     }
     .contacs__item
     {
@@ -1156,11 +1317,6 @@ ul
         line-height: 28px;
         margin: 23px 0 0 0;
     }
-    .techno__app
-    {
-        margin: 24px 0 0 0;
-    }
-    
     .techno__apple
     {
         margin: 0 50px;
@@ -1186,8 +1342,8 @@ ul
     }
     .techno__items
     {
+        width: 280px;
         margin: 0 auto;
-        margin-top: 30px;
     }
     .techno__btn
     {
@@ -1297,7 +1453,7 @@ ul
     }
     .contacs__title
     {
-        width: 116px;
+        width: 100px;
         height: 24px;
     }
     .contacs__text
@@ -1305,6 +1461,7 @@ ul
         font-size: 18px;
         line-height: 28px;
         margin-top: 14px;
+        width: 300px;
     }
     .contacs__sub-text
     {
@@ -1314,6 +1471,7 @@ ul
     .contacs__item
     {
         flex-direction: column;
+        margin: 108px 0 0 0;
     }
     .contacs_link
     {
@@ -1489,7 +1647,8 @@ ul
     }
     .techno__app
     {
-        margin: 24px 0 0 0;
+        margin: 29px 0 0 0px;
+        width: 300px;
     }
     
     .techno__apple
