@@ -496,6 +496,7 @@ a
     font-family: "Open Sans", sans-serif;
     font-weight:800;
     font-size:24px;
+    margin-bottom: 30px;
 }
 #block-seven
 {
@@ -676,10 +677,6 @@ a
     #block-six
     {
         height: auto;
-    }
-    #block-six__title
-    {
-        margin-bottom: 30px;
     }
     #block-seven__title
     {
