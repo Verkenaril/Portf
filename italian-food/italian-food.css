@@ -129,10 +129,14 @@ a
     position:relative;
     top:12px;
 }
-#b-one_lorem-text
+.text
 {
     font-size:21px;
     font-family: "Myriad Pro", sans-serif;
+}
+.b-one_lorem-text
+{
+    
     margin: 20px 0 0 0;
 }
 .block-one__main_right
@@ -178,10 +182,8 @@ a
 {
     margin: 15px 0 110px 0;
 }
-#block-two__text
+.block-two__text
 {
-    font-size:27px;
-    font-family: "Myriad Pro", sans-serif;
     text-align: center;
     width: 80%;
     margin: 0 0 90px 0;
@@ -234,8 +236,8 @@ a
     cursor:pointer;
     font-family: "Myriad Pro", sans-serif;
     font-weight: bold;
-    font-size:23px;
-    color:white;
+    font-size: 23px;
+    color: white;
     transition-duration: 0.5s;
 }
 #show-more-btn:hover
@@ -280,8 +282,8 @@ a
     font-family: "Myriad Pro", sans-serif;
     text-align: center;
     color:#27292c;
-    width:270px;
-    height:58px;
+    width: 270px;
+    height: 58px;
     cursor:pointer;
     transition-duration: 0.5s;
     margin-bottom: 20px;
@@ -298,10 +300,10 @@ a
 }
 #block-four
 {
-    display:flex;
+    display: flex;
     justify-content: center;
-    color:#27292c;
-    height:1560px;
+    color: #27292c;
+    height: 1560px;
     margin: 0 25px;
 }
 #block-four__left
@@ -323,11 +325,9 @@ a
     
     margin: 0 0 60px 0;
 }
-#block-four__left-text
+.block-four__left-text
 {
     font-size:29px;
-    font-family: "Myriad Pro", sans-serif;
-    
     margin: 0 0 60px 0;
 }
 #block-four__left-btn
@@ -362,11 +362,9 @@ a
     
     margin: 180px 0 55px 0;
 }
-#block-four__right-text
+.block-four__right-text
 {
     font-size:29px;
-    font-family: "Myriad Pro", sans-serif;
-    
     margin-bottom:60px;
 }
 #block-four__right-btn
@@ -417,11 +415,9 @@ a
     font-size: 80px;
     z-index:1;
 }
-#block-five__text
+.block-five__text
 {
     width: 70%;
-    font-size:25px;
-    font-family: "Myriad Pro", sans-serif;
     z-index:1;
     margin: 0 0 45px 0;
 }
@@ -441,7 +437,6 @@ a
     right: 23%;
     width: 70%;
 }
-
 #leafs5
 {
     width: 100%;
@@ -483,12 +478,10 @@ a
     font-family: "Myriad Pro", sans-serif;
     font-size: 19px;
 }
-#block-six__text
+.block-six__text
 {
     width: 70%;
     text-align: center;
-    font-family: "Myriad Pro", sans-serif;
-    font-size: 25px;
     margin: 0 0 60px 0;
 }
 #block-six__title
@@ -513,9 +506,8 @@ a
     font-size:75px;
     margin: 240px 0 75px 0;
 }
-#block-seven__text 
+.block-seven__text 
 {
-    font-family: "Myriad Pro", sans-serif;
     font-size: 29px;
     width: 70%;
     text-align: center;
@@ -583,12 +575,10 @@ a
     display:block;
     margin:0 0 40px 0;
 }
-#block-eight__text
+.block-eight__text
 {
-    display:block;
+    display: block;
     width: 440px;
-    font-family: "Myriad Pro", sans-serif;
-    font-size: 23px;
 }
 #block-eight>div:last-child
 {
@@ -649,7 +639,7 @@ a
         width: 66%;
         margin: 0 24px 30px 0;
     }
-    #block-eight__text
+    .block-eight__text
     {
         width: auto;
     }
@@ -786,7 +776,7 @@ a
     {
         font-size: 45px;
     }
-    #block-seven__text
+    .block-seven__text
     {
         font-size: 24px;
         text-align: left;
@@ -887,7 +877,7 @@ a
     {
         margin: 15px 0 40px 0;
     }
-    #block-two__text
+    .block-two__text
     {
         margin: 0 0 60px 0;
     }
@@ -942,7 +932,7 @@ a
         font-size: 35px;
         width: 365px;
     }
-    #block-four__left-text
+    .block-four__left-text
     {
         font-size: 20px;
         width: 345px;
@@ -961,7 +951,7 @@ a
         font-size: 35px;
         width: 290px;
     }
-    #block-four__right-text
+    .block-four__right-text
     {
         font-size: 20px;
         width: 280px;
@@ -982,7 +972,7 @@ a
     {
         font-size: 60px;
     }
-    #block-five__text
+    .block-five__text
     {
         width: 450px;
     }
@@ -1011,7 +1001,7 @@ a
     {
         margin: 0 0 10px 10px;
     }
-    #block-six__text
+    .block-six__text
     {
         width: 630px;
     }
@@ -1024,7 +1014,7 @@ a
         margin: 90px 0 75px 0;
         font-size: 65px;
     }
-    #block-seven__text
+    .block-seven__text
     {
         width: 680px;
     }
@@ -1049,7 +1039,7 @@ a
         width: 700px;
         margin: 0 0 0 60px;
     }
-    #block-eight__text
+    .block-eight__text
     {
         width: 640px;
     }
@@ -1122,7 +1112,7 @@ a
         font-size: 75px;
         margin: 0 0 0 0;
     }
-    #b-one_lorem-text
+    .b-one_lorem-text
     {
         font-size: 25px;
         width: 320px;
@@ -1144,12 +1134,12 @@ a
     {
         font-size:48px;
     }
-    #block-two__text
+    .block-two__text
     {
         margin:0;
         width:auto;
     }
-    #block-two__text span
+    .block-two__text span
     {
         font-size:20px;
     }
@@ -1218,7 +1208,7 @@ a
         width: 380px;
         margin: 0;
     }
-    #block-four__left-text
+    .block-four__left-text
     {
         margin: 0;
         width: 380px;
@@ -1239,7 +1229,7 @@ a
         margin: 0;
         order: 1;
     }
-    #block-four__right-text
+    .block-four__right-text
     {
         margin: 0;
         width: 380px;
@@ -1266,7 +1256,7 @@ a
         width:320px;
         align-self:center;
     }
-    #block-five__text
+    .block-five__text
     {
         margin: 0; 
         width: 340px;
@@ -1313,7 +1303,7 @@ a
     {
         margin:0;
     }
-    #block-six__text
+    .block-six__text
     {
         width: 337px;
         text-align:left;
@@ -1334,7 +1324,7 @@ a
         margin: 0;
         font-size:55px;
     }
-    #block-seven__text
+    .block-seven__text
     {
         width: 380px;
         margin: 0px;
@@ -1373,7 +1363,7 @@ a
         font-size: 35px;
         width:auto;
     }
-    #block-eight__text
+    .block-eight__text
     {
         width: 330px;
         font-size: 30px;
