@@ -618,7 +618,7 @@ part-two__text p:last-child
         display: none;
     }
 }
-@media (max-width: 1278px)
+@media (max-width: 1288px)
 {
     #wrapper
     {
@@ -747,7 +747,7 @@ part-two__text p:last-child
     }  
 }
 
-@media (max-width: 860px)
+@media (max-width: 766px)
 {
     #wrapper
     {
