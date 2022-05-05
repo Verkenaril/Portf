@@ -345,6 +345,7 @@ part-two__text p:last-child
 {
     display: flex;
     margin-top: 85px;
+    margin-bottom: 70px;
     justify-content: center;
 }
 .teaching__item
@@ -904,7 +905,6 @@ part-two__text p:last-child
         flex-wrap: nowrap;
         align-items: center;
         margin-top: 50px;
-        margin-bottom: 70px;
     }
     .note__title
     {
