@@ -312,16 +312,25 @@ part-two__text p:last-child
     height: 474px;
     margin: 0 0 0 80px;
 }
+.teaching__title>span
+{
+    position: relative;
+}
 .teaching__title
 {
     margin-top: 140px;
     width: 696px;
 }
-.teaching__title>span
+.bottom-border-text
 {
-    border-bottom: 7px solid transparent;
-    border-image: linear-gradient(264.91deg, #7C4EAB 0.73%, #DD51D4 95.85%);
-    border-image-slice: 1;   
+    width: 261px;
+    height: 7px;
+    position: absolute;
+    background-image: linear-gradient(264.91deg, #7C4EAB 0.73%, #DD51D4 95.85%);
+    border-radius: 5px;
+    top: 60px;
+    left: 0px;
+    width: 267px;
 }
 .teaching__subtitle
 {
@@ -338,12 +347,10 @@ part-two__text p:last-child
     margin-top: 85px;
     justify-content: center;
 }
-
 .teaching__item
 {
     width: 290px;
 }
-
 .teaching__item:nth-child(1), .teaching__item:nth-child(2), .teaching__item:nth-child(3)
 {
     margin: 0 123px 0 0;
@@ -377,7 +384,7 @@ part-two__text p:last-child
     margin: 15px 0 0 0;
 }
 
-.btn, .header__nav li a, #nav-elem span, .header__number a
+.btn, .header__nav li a, #nav-elem span, .header__number a, .header__burger-menu
 {
     transition: 0.4s;
 }
@@ -440,11 +447,12 @@ part-two__text p:last-child
     left: 0px;
 }
 
+
 @media (max-width: 1990px)
 {
     #wrapper
     {
-        max-width: 1280px;
+        width: 1280px;
     }
     #page
     {
@@ -466,6 +474,7 @@ part-two__text p:last-child
     {
         margin: 0 18.96px 0 0;
     }
+
     .header__text
     {
         width: 145px;
@@ -503,10 +512,12 @@ part-two__text p:last-child
         font-size: 46px;
         line-height: 65px;
     }
+
     .course__price
     {
         margin: 40px 0 0 0;
     }
+
     .course__text
     {
         font-size: 20px;
@@ -521,8 +532,7 @@ part-two__text p:last-child
     {
         width: 458px;
         height: 416.08px;
-        margin: 0 0 0 54px;
-        
+        margin: 0 0 0 54px;     
     }
     .course__text
     {
@@ -532,6 +542,11 @@ part-two__text p:last-child
     {
         width: 435.35px;
         height: 435.35px;  
+    }
+    .bottom-border-text
+    {
+        width: 223px;
+        top: 53px;
     }
     .title
     {
@@ -618,6 +633,8 @@ part-two__text p:last-child
         display: none;
     }
 }
+ 
+    
 @media (max-width: 1288px)
 {
     #wrapper
@@ -747,6 +764,7 @@ part-two__text p:last-child
     }  
 }
 
+
 @media (max-width: 766px)
 {
     #wrapper
@@ -818,6 +836,12 @@ part-two__text p:last-child
     {
         font-size: 24px;
         line-height: 150%;
+    }
+    .bottom-border-text
+    {
+        width: 133px;
+        height: 4px;
+        top: 30px;
     }
     .backstory__title
     {
@@ -904,5 +928,5 @@ part-two__text p:last-child
     {
         margin: 0 auto;
     }
-    
 }
+
