@@ -1,0 +1,53 @@
+@font-face
+{
+    font-family: "Neue Haas  Grotesk Display Pro";
+    src: url("./fonts/NeueHaasDisplayPro/NeueHaasDisplayLight.ttf");
+}
+<link rel="preconnect" href="./fonts/Light Brighter.ttf" as="font">
+<link rel="preconnect" href="/fonts/NeueHaasDisplayPro/NeueHaasDisplayBlackItalic.ttf" as="font">
+     
+
+<link rel="preconnect" href="/fonts/NeueHaasDisplayPro/NeueHaasDisplayBold.ttf" as="font">    
+<link rel="preconnect" href="/fonts/NeueHaasDisplayPro/NeueHaasDisplayBoldItalic.ttf" as="font">
+   
+<link rel="preconnect" href="/fonts/NeueHaasDisplayPro/NeueHaasDisplayLight.ttf" as="font">
+<link rel="preconnect" href="/fonts/NeueHaasDisplayPro/NeueHaasDisplayLightItalic.ttf" as="font">
+
+<link rel="preconnect" href="/fonts/NeueHaasDisplayPro/NeueHaasDisplayMedium.ttf" as="font">   
+<link rel="preconnect" href="/fonts/NeueHaasDisplayPro/NeueHaasDisplayMediumItalic.ttf" as="font">
+
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+}
+body
+{
+    
+}
+#wrapper
+{
+    background: linear-gradient(65.34deg, #020252 37.22%, #060362 59.31%, #0B056B 76.39%, #110776 98.48%);   
+}
+#page
+{    
+/*
+  background: linear-gradient(34.97deg, #010159 -2.56%, #060362 17.46%, #14087B 49.16%, #33148A 95.87%, #6E2993 153.85%);
+    background-blend-mode: screen;
+    mix-blend-mode: screen;
+    opacity: 0.4;
+*/
+}
+
+.header__menu
+{
+    font-family: "Neue Haas  Grotesk Display Pro", sans-serif;
+    font-size: 20px;
+}
