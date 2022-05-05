@@ -659,7 +659,8 @@ part-two__text p:last-child
     }
     .header__text
     {
-        margin: 0 96px 0 0;
+        margin: 0 82px 0 0;
+        width: 159px;
     }
     .header__burger-menu svg
     {
@@ -763,7 +764,7 @@ part-two__text p:last-child
         width: 250px;
     }  
 }
-
+@media ()
 
 @media (max-width: 766px)
 {
