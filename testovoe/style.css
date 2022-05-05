@@ -345,7 +345,7 @@ part-two__text p:last-child
 {
     display: flex;
     margin-top: 85px;
-    margin-bottom: 70px;
+    margin-bottom: 75px;
     justify-content: center;
 }
 .teaching__item
