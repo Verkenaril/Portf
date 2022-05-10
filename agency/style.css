@@ -738,6 +738,13 @@ body
     margin: 166px 0 0 0;
 }
 
+
+.header__logo:hover, .header__menu li a:hover, .header__icon svg:hover, .agency__contact-btn:hover, .contact-us__title:hover
+{
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
 @keyframes rotateEl
 {
     0%
