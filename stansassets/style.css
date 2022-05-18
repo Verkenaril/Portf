@@ -495,6 +495,7 @@ ul
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+    margin: 0 0 25px 0;
 }
 .contacs__icon
 {
@@ -502,7 +503,7 @@ ul
     height: 20px;
     background-repeat: no-repeat;
     display: inline-block;
-    margin: 0 21px 24px 0;
+    margin: 0 21px 0 0;
     vertical-align: top;
 }
 .contacs__info div:nth-child(1) .contacs__icon
@@ -883,13 +884,16 @@ ul
     .contacs__form
     {
         margin: 20px 0 0 5%;
-    }
+    } 
+}
+@media screen and (max-width: 857px)
+{
      .footer__menu ul:nth-child(4)
     {
         margin: 0 0 0 0;
     }
-    
 }
+    
 @media screen and (max-width: 777px)
 {
     .header__btn
