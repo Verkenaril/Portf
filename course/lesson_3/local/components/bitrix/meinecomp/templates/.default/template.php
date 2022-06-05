@@ -26,8 +26,8 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
     endif;
 ?> 
     <form method="post" action="">
-        <input type="number" name="quantityPresent">
-        <button type="submit" name="getMorePresent" id="more" class="mybtn">Хочу ещё</button>
+        <input type="number" name="quantityPresent" placeholder="Количество подарков">
+        <button type="submit" name="getMorePresent">Хочу ещё</button>
         
     </form>
 

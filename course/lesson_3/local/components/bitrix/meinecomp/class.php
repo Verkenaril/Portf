@@ -50,21 +50,8 @@ class MeineComponent extends CBitrixComponent
         }
         
         
-        
         $this->includeComponentTemplate(); 
     }
-//    public static function getPresent()
-//    {
-//        if(count(self::arResult['BASKET_ITEMS']) == 3)
-//        {
-//        $product = 
-//            [
-//                "PRODUCT_ID" => 328, 
-//                "QUANTITY" => 1, 
-//            ];
-//        $add = Bitrix\Catalog\Product\Basket::addProduct($product); 
-//        }
-//    }
     
 }
 
