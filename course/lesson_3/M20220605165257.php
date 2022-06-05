@@ -1,0 +1,857 @@
+<?php
+
+namespace Sprint\Migration;
+
+
+class M20220605165257 extends Version
+{
+    protected $description = "";
+
+    protected $moduleVersion = "4.0.6";
+
+    /**
+     * @throws Exceptions\HelperException
+     * @return bool|void
+     */
+    public function up()
+    {
+        $helper = $this->getHelperManager();
+        $helper->Iblock()->saveIblockType(array (
+  'ID' => 'catalog',
+  'SECTIONS' => 'Y',
+  'EDIT_FILE_BEFORE' => NULL,
+  'EDIT_FILE_AFTER' => NULL,
+  'IN_RSS' => 'N',
+  'SORT' => '100',
+  'LANG' => 
+  array (
+    'ru' => 
+    array (
+      'NAME' => 'Каталоги',
+      'SECTION_NAME' => 'Разделы',
+      'ELEMENT_NAME' => 'Товары',
+    ),
+    'en' => 
+    array (
+      'NAME' => 'Catalog',
+      'SECTION_NAME' => 'Sections',
+      'ELEMENT_NAME' => 'Products',
+    ),
+  ),
+));
+        $iblockId = $helper->Iblock()->saveIblock(array (
+  'IBLOCK_TYPE_ID' => 'catalog',
+  'LID' => 
+  array (
+    0 => 's1',
+  ),
+  'CODE' => 'clothes',
+  'API_CODE' => NULL,
+  'REST_ON' => 'N',
+  'NAME' => 'Одежда',
+  'ACTIVE' => 'Y',
+  'SORT' => '500',
+  'LIST_PAGE_URL' => '#SITE_DIR#/catalog/',
+  'DETAIL_PAGE_URL' => '#SITE_DIR#/catalog/#SECTION_CODE#/#ELEMENT_CODE#/',
+  'SECTION_PAGE_URL' => '#SITE_DIR#/catalog/#SECTION_CODE#/',
+  'CANONICAL_PAGE_URL' => '',
+  'PICTURE' => '36',
+  'DESCRIPTION' => 'Одежда нашей основной фабрики в Санкт-Петербурге.',
+  'DESCRIPTION_TYPE' => 'html',
+  'RSS_TTL' => '24',
+  'RSS_ACTIVE' => 'Y',
+  'RSS_FILE_ACTIVE' => 'N',
+  'RSS_FILE_LIMIT' => NULL,
+  'RSS_FILE_DAYS' => NULL,
+  'RSS_YANDEX_ACTIVE' => 'N',
+  'XML_ID' => 'clothes_s1',
+  'INDEX_ELEMENT' => 'Y',
+  'INDEX_SECTION' => 'Y',
+  'WORKFLOW' => 'N',
+  'BIZPROC' => 'N',
+  'SECTION_CHOOSER' => 'L',
+  'LIST_MODE' => 'S',
+  'RIGHTS_MODE' => 'S',
+  'SECTION_PROPERTY' => 'Y',
+  'PROPERTY_INDEX' => 'Y',
+  'VERSION' => '1',
+  'LAST_CONV_ELEMENT' => '0',
+  'SOCNET_GROUP_ID' => NULL,
+  'EDIT_FILE_BEFORE' => '',
+  'EDIT_FILE_AFTER' => '',
+  'SECTIONS_NAME' => 'Разделы',
+  'SECTION_NAME' => 'Раздел',
+  'ELEMENTS_NAME' => 'Товары',
+  'ELEMENT_NAME' => 'Товар',
+  'EXTERNAL_ID' => 'clothes_s1',
+  'LANG_DIR' => '/',
+  'SERVER_NAME' => 'birtix.my',
+  'IPROPERTY_TEMPLATES' => 
+  array (
+    'ELEMENT_META_TITLE' => 'Каталог {=this.Name} от магазина Одежда+',
+    'ELEMENT_META_KEYWORDS' => '{=this.Name}, купить {=this.Name}, приобрести {=this.Name}, {=this.Name} в различных цветах, {=this.Name} от дистрибьютора',
+    'ELEMENT_META_DESCRIPTION' => 'В магазине Одежда+ собран огромный каталог, где не последняя роль отведена разделу {=this.Name}, представленный официальным дистрибьютором в России',
+    'ELEMENT_DETAIL_PICTURE_FILE_TITLE' => 'картинка {=this.Name} магазин Одежда+ являющийся официальным дистрибьютором в России ',
+    'ELEMENT_DETAIL_PICTURE_FILE_NAME' => '{=lower this.Name}/lt-',
+    'ELEMENT_DETAIL_PICTURE_FILE_ALT' => 'картинка {=this.Name} от магазина Одежда+',
+    'ELEMENT_PREVIEW_PICTURE_FILE_TITLE' => 'картинка {=this.Name} магазин Одежда+ являющийся официальным дистрибьютором в России ',
+    'SECTION_META_DESCRIPTION' => 'В магазине Одежда+ собран огромный каталог, где не последняя роль отведена разделу {=this.Name}, представленный официальным дистрибьютором в России',
+    'ELEMENT_PREVIEW_PICTURE_FILE_ALT' => 'картинка {=this.Name} от магазина Одежда+',
+    'SECTION_META_KEYWORDS' => '{=this.Name}, купить {=this.Name}, приобрести {=this.Name}, {=this.Name} в различных цветах, {=this.Name} от дистрибьютора',
+    'SECTION_META_TITLE' => 'Каталог {=this.Name} от магазина Одежда+',
+    'ELEMENT_PREVIEW_PICTURE_FILE_NAME' => '{=lower this.Name}/lt-',
+  ),
+  'ELEMENT_ADD' => 'Добавить товар',
+  'ELEMENT_EDIT' => 'Изменить товар',
+  'ELEMENT_DELETE' => 'Удалить товар',
+  'SECTION_ADD' => 'Добавить раздел',
+  'SECTION_EDIT' => 'Изменить раздел',
+  'SECTION_DELETE' => 'Удалить раздел',
+));
+        $helper->Iblock()->saveIblockFields($iblockId, array (
+  'IBLOCK_SECTION' => 
+  array (
+    'NAME' => 'Привязка к разделам',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => 
+    array (
+      'KEEP_IBLOCK_SECTION_ID' => 'N',
+    ),
+  ),
+  'ACTIVE' => 
+  array (
+    'NAME' => 'Активность',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => 'Y',
+  ),
+  'ACTIVE_FROM' => 
+  array (
+    'NAME' => 'Начало активности',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+  ),
+  'ACTIVE_TO' => 
+  array (
+    'NAME' => 'Окончание активности',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+  ),
+  'SORT' => 
+  array (
+    'NAME' => 'Сортировка',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '0',
+  ),
+  'NAME' => 
+  array (
+    'NAME' => 'Название',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => '',
+  ),
+  'PREVIEW_PICTURE' => 
+  array (
+    'NAME' => 'Картинка для анонса',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => 
+    array (
+      'FROM_DETAIL' => 'N',
+      'SCALE' => 'N',
+      'WIDTH' => '',
+      'HEIGHT' => '',
+      'IGNORE_ERRORS' => 'N',
+      'METHOD' => 'resample',
+      'COMPRESSION' => 95,
+      'DELETE_WITH_DETAIL' => 'N',
+      'UPDATE_WITH_DETAIL' => 'N',
+      'USE_WATERMARK_TEXT' => 'N',
+      'WATERMARK_TEXT' => '',
+      'WATERMARK_TEXT_FONT' => '',
+      'WATERMARK_TEXT_COLOR' => '',
+      'WATERMARK_TEXT_SIZE' => '',
+      'WATERMARK_TEXT_POSITION' => 'tl',
+      'USE_WATERMARK_FILE' => 'N',
+      'WATERMARK_FILE' => '',
+      'WATERMARK_FILE_ALPHA' => '',
+      'WATERMARK_FILE_POSITION' => 'tl',
+      'WATERMARK_FILE_ORDER' => NULL,
+    ),
+  ),
+  'PREVIEW_TEXT_TYPE' => 
+  array (
+    'NAME' => 'Тип описания для анонса',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => 'text',
+  ),
+  'PREVIEW_TEXT' => 
+  array (
+    'NAME' => 'Описание для анонса',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+  ),
+  'DETAIL_PICTURE' => 
+  array (
+    'NAME' => 'Детальная картинка',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => 
+    array (
+      'SCALE' => 'N',
+      'WIDTH' => '',
+      'HEIGHT' => '',
+      'IGNORE_ERRORS' => 'N',
+      'METHOD' => 'resample',
+      'COMPRESSION' => 95,
+      'USE_WATERMARK_TEXT' => 'N',
+      'WATERMARK_TEXT' => '',
+      'WATERMARK_TEXT_FONT' => '',
+      'WATERMARK_TEXT_COLOR' => '',
+      'WATERMARK_TEXT_SIZE' => '',
+      'WATERMARK_TEXT_POSITION' => 'tl',
+      'USE_WATERMARK_FILE' => 'N',
+      'WATERMARK_FILE' => '',
+      'WATERMARK_FILE_ALPHA' => '',
+      'WATERMARK_FILE_POSITION' => 'tl',
+      'WATERMARK_FILE_ORDER' => NULL,
+    ),
+  ),
+  'DETAIL_TEXT_TYPE' => 
+  array (
+    'NAME' => 'Тип детального описания',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => 'text',
+  ),
+  'DETAIL_TEXT' => 
+  array (
+    'NAME' => 'Детальное описание',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+  ),
+  'XML_ID' => 
+  array (
+    'NAME' => 'Внешний код',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => '',
+  ),
+  'CODE' => 
+  array (
+    'NAME' => 'Символьный код',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => 
+    array (
+      'UNIQUE' => 'Y',
+      'TRANSLITERATION' => 'Y',
+      'TRANS_LEN' => 100,
+      'TRANS_CASE' => 'L',
+      'TRANS_SPACE' => '_',
+      'TRANS_OTHER' => '_',
+      'TRANS_EAT' => 'Y',
+      'USE_GOOGLE' => 'Y',
+    ),
+  ),
+  'TAGS' => 
+  array (
+    'NAME' => 'Теги',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+  ),
+  'SECTION_NAME' => 
+  array (
+    'NAME' => 'Название',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => '',
+  ),
+  'SECTION_PICTURE' => 
+  array (
+    'NAME' => 'Картинка для анонса',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => 
+    array (
+      'FROM_DETAIL' => 'N',
+      'SCALE' => 'N',
+      'WIDTH' => '',
+      'HEIGHT' => '',
+      'IGNORE_ERRORS' => 'N',
+      'METHOD' => 'resample',
+      'COMPRESSION' => 95,
+      'DELETE_WITH_DETAIL' => 'N',
+      'UPDATE_WITH_DETAIL' => 'N',
+      'USE_WATERMARK_TEXT' => 'N',
+      'WATERMARK_TEXT' => '',
+      'WATERMARK_TEXT_FONT' => '',
+      'WATERMARK_TEXT_COLOR' => '',
+      'WATERMARK_TEXT_SIZE' => '',
+      'WATERMARK_TEXT_POSITION' => 'tl',
+      'USE_WATERMARK_FILE' => 'N',
+      'WATERMARK_FILE' => '',
+      'WATERMARK_FILE_ALPHA' => '',
+      'WATERMARK_FILE_POSITION' => 'tl',
+      'WATERMARK_FILE_ORDER' => NULL,
+    ),
+  ),
+  'SECTION_DESCRIPTION_TYPE' => 
+  array (
+    'NAME' => 'Тип описания',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => 'text',
+  ),
+  'SECTION_DESCRIPTION' => 
+  array (
+    'NAME' => 'Описание',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+  ),
+  'SECTION_DETAIL_PICTURE' => 
+  array (
+    'NAME' => 'Детальная картинка',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => 
+    array (
+      'SCALE' => 'N',
+      'WIDTH' => '',
+      'HEIGHT' => '',
+      'IGNORE_ERRORS' => 'N',
+      'METHOD' => 'resample',
+      'COMPRESSION' => 95,
+      'USE_WATERMARK_TEXT' => 'N',
+      'WATERMARK_TEXT' => '',
+      'WATERMARK_TEXT_FONT' => '',
+      'WATERMARK_TEXT_COLOR' => '',
+      'WATERMARK_TEXT_SIZE' => '',
+      'WATERMARK_TEXT_POSITION' => 'tl',
+      'USE_WATERMARK_FILE' => 'N',
+      'WATERMARK_FILE' => '',
+      'WATERMARK_FILE_ALPHA' => '',
+      'WATERMARK_FILE_POSITION' => 'tl',
+      'WATERMARK_FILE_ORDER' => NULL,
+    ),
+  ),
+  'SECTION_XML_ID' => 
+  array (
+    'NAME' => 'Внешний код',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+  ),
+  'SECTION_CODE' => 
+  array (
+    'NAME' => 'Символьный код',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => 
+    array (
+      'UNIQUE' => 'Y',
+      'TRANSLITERATION' => 'Y',
+      'TRANS_LEN' => 100,
+      'TRANS_CASE' => 'L',
+      'TRANS_SPACE' => '_',
+      'TRANS_OTHER' => '_',
+      'TRANS_EAT' => 'Y',
+      'USE_GOOGLE' => 'Y',
+    ),
+  ),
+));
+        $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Заголовок окна браузера',
+  'ACTIVE' => 'Y',
+  'SORT' => '110',
+  'CODE' => 'TITLE',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'S',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '50',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '331',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Ключевые слова',
+  'ACTIVE' => 'Y',
+  'SORT' => '120',
+  'CODE' => 'KEYWORDS',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'S',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '50',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '335',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Мета-описание',
+  'ACTIVE' => 'Y',
+  'SORT' => '130',
+  'CODE' => 'META_DESCRIPTION',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'S',
+  'ROW_COUNT' => '3',
+  'COL_COUNT' => '38',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '337',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Бренд',
+  'ACTIVE' => 'Y',
+  'SORT' => '200',
+  'CODE' => 'BRAND_REF',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'S',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'Y',
+  'XML_ID' => 'BRAND_REF',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => 'directory',
+  'USER_TYPE_SETTINGS' => 
+  array (
+    'size' => 1,
+    'width' => 0,
+    'group' => 'N',
+    'multiple' => 'N',
+    'TABLE_NAME' => 'eshop_brand_reference',
+  ),
+  'HINT' => '',
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Новинка',
+  'ACTIVE' => 'Y',
+  'SORT' => '210',
+  'CODE' => 'NEWPRODUCT',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'L',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'C',
+  'MULTIPLE' => 'N',
+  'XML_ID' => 'af49d0e309af4fac506a8a228000efc5',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'Y',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+  'VALUES' => 
+  array (
+    0 => 
+    array (
+      'VALUE' => 'да',
+      'DEF' => 'N',
+      'SORT' => '500',
+      'XML_ID' => 'Y',
+    ),
+  ),
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Лидер продаж',
+  'ACTIVE' => 'Y',
+  'SORT' => '220',
+  'CODE' => 'SALELEADER',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'L',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'C',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '103',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'Y',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+  'VALUES' => 
+  array (
+    0 => 
+    array (
+      'VALUE' => 'да',
+      'DEF' => 'N',
+      'SORT' => '500',
+      'XML_ID' => 'YYY',
+    ),
+  ),
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Спецпредложение',
+  'ACTIVE' => 'Y',
+  'SORT' => '230',
+  'CODE' => 'SPECIALOFFER',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'L',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'C',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '5',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'Y',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+  'VALUES' => 
+  array (
+    0 => 
+    array (
+      'VALUE' => 'да',
+      'DEF' => 'N',
+      'SORT' => '500',
+      'XML_ID' => 'YES',
+    ),
+  ),
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Артикул',
+  'ACTIVE' => 'Y',
+  'SORT' => '310',
+  'CODE' => 'ARTNUMBER',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'S',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '10',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+  'FEATURES' => 
+  array (
+    0 => 
+    array (
+      'MODULE_ID' => 'iblock',
+      'FEATURE_ID' => 'DETAIL_PAGE_SHOW',
+      'IS_ENABLED' => 'Y',
+    ),
+    1 => 
+    array (
+      'MODULE_ID' => 'iblock',
+      'FEATURE_ID' => 'LIST_PAGE_SHOW',
+      'IS_ENABLED' => 'Y',
+    ),
+  ),
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Производитель',
+  'ACTIVE' => 'Y',
+  'SORT' => '320',
+  'CODE' => 'MANUFACTURER',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'S',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '12',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+  'FEATURES' => 
+  array (
+    0 => 
+    array (
+      'MODULE_ID' => 'iblock',
+      'FEATURE_ID' => 'DETAIL_PAGE_SHOW',
+      'IS_ENABLED' => 'Y',
+    ),
+    1 => 
+    array (
+      'MODULE_ID' => 'iblock',
+      'FEATURE_ID' => 'LIST_PAGE_SHOW',
+      'IS_ENABLED' => 'Y',
+    ),
+  ),
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Материал',
+  'ACTIVE' => 'Y',
+  'SORT' => '330',
+  'CODE' => 'MATERIAL',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'S',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'Y',
+  'XML_ID' => '11',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '1',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+  'FEATURES' => 
+  array (
+    0 => 
+    array (
+      'MODULE_ID' => 'iblock',
+      'FEATURE_ID' => 'DETAIL_PAGE_SHOW',
+      'IS_ENABLED' => 'Y',
+    ),
+    1 => 
+    array (
+      'MODULE_ID' => 'iblock',
+      'FEATURE_ID' => 'LIST_PAGE_SHOW',
+      'IS_ENABLED' => 'Y',
+    ),
+  ),
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Цвет',
+  'ACTIVE' => 'Y',
+  'SORT' => '340',
+  'CODE' => 'COLOR',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'S',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '291',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '3',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Картинки галереи',
+  'ACTIVE' => 'Y',
+  'SORT' => '500',
+  'CODE' => 'MORE_PHOTO',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'F',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'Y',
+  'XML_ID' => 'MORE_PHOTO',
+  'FILE_TYPE' => 'jpg, gif, bmp, png, jpeg',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'Y',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'С этим товаром рекомендуем',
+  'ACTIVE' => 'Y',
+  'SORT' => '500',
+  'CODE' => 'RECOMMEND',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'E',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'Y',
+  'XML_ID' => '461',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => 'catalog:clothes',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'ID поста блога для комментариев',
+  'ACTIVE' => 'Y',
+  'SORT' => '500',
+  'CODE' => 'BLOG_POST_ID',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'N',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '43',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Количество комментариев',
+  'ACTIVE' => 'Y',
+  'SORT' => '500',
+  'CODE' => 'BLOG_COMMENTS_CNT',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'N',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '44',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Фоновая картинка для шаблона',
+  'ACTIVE' => 'Y',
+  'SORT' => '500',
+  'CODE' => 'BACKGROUND_IMAGE',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'F',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '45',
+  'FILE_TYPE' => 'jpg, gif, bmp, png, jpeg',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Тренды',
+  'ACTIVE' => 'Y',
+  'SORT' => '500',
+  'CODE' => 'TREND',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'L',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'C',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '46',
+  'FILE_TYPE' => '',
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => '0',
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'Y',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => '',
+  'VALUES' => 
+  array (
+    0 => 
+    array (
+      'VALUE' => 'Да',
+      'DEF' => 'N',
+      'SORT' => '500',
+      'XML_ID' => 'Y',
+    ),
+  ),
+));
+    
+    }
+
+    public function down()
+    {
+        //your code ...
+    }
+}
