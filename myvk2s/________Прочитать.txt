@@ -1,0 +1,10 @@
+1. Добавить в базу города и страны. Иначе "моя страница" не будет пахать.
+2. Закомментировал в vendor\laravel\ui\src\AuthRouteMethods.php строку.
+// Login Routes...
+                 if ($options['login'] ?? true) {
+        эту    //    $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
+                     $this->post('login', 'Auth\LoginController@login');
+                 }
+
+
+Это для того чтобы при нажатии Enter по адресу http://127.0.0.1:8000/login не было перехода на blade шаблон
