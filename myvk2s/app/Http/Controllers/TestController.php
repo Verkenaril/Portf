@@ -11,7 +11,6 @@ class TestController extends Controller
 {
     public function index(Request $request)
     {
-        broadcast(new TestEvent(1212));
-        return 1111;
+        return 1113331;
     }
 }

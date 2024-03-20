@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string("first_name");
             $table->string("second_name");
             $table->string("avatar")->default("../img/no_avatar.png");
-            $table->string("city")->default("Заполню позже");
-            $table->string("country")->default("Заполню позже");
-            $table->text("description")->default("Заполню позже");
-            $table->text("hobbies")->default("Заполню позже");
+            $table->string("city")->default("Just void");
+            $table->string("country")->default("Just void");
+            $table->text("description")->nullable();
+            $table->text("hobbies")->nullable();
             $table->date("date_born")->nullable();
             $table->timestamps();
         });

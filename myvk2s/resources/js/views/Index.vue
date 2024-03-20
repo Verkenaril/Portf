@@ -91,6 +91,9 @@ export default
     {
         PageLoader
     },
+    mounted()
+    {
+    },
     created()
     {
         window.Echo.channel("user_recipient" + localStorage["auth_user_id"]) // имя заданное в broadcastOn()
@@ -103,8 +106,9 @@ export default
     },
     updated()
     {
+        
         this.getToken();
-        this.getLogin();
+        // this.getLogin();
 
     },
     methods:

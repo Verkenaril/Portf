@@ -14,7 +14,6 @@ use function array_keys;
 use function array_merge;
 use function assert;
 use function escapeshellarg;
-use function file_exists;
 use function file_get_contents;
 use function ini_get_all;
 use function restore_error_handler;
@@ -139,12 +138,13 @@ abstract class AbstractPhpProcess
     {
         $_result = $this->runJob($job);
 
-        $processResult = '';
+        $processResult = @file_get_contents($processResultFile);
 
-        if (file_exists($processResultFile)) {
-            $processResult = file_get_contents($processResultFile);
+        if ($processResult !== false) {
 
             @unlink($processResultFile);
+        } else {
+            $processResult = '';
         }
 
         $this->processChildResult(
@@ -157,7 +157,7 @@ abstract class AbstractPhpProcess
     /**
      * Returns the command based into the configurations.
      */
-    public function getCommand(array $settings, string $file = null): string
+    public function getCommand(array $settings, ?string $file = null): string
     {
         $runtime = new Runtime;
 

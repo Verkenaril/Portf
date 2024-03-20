@@ -42,7 +42,9 @@ class PersonSeeder extends Seeder
             'second_name' => "lolosd",
         ]);
 
-
+        DB::table('countries')->insert([
+            "country" => "Россия"
+        ]);
 
         for($i = 0; $i < 10; $i++)
         {
@@ -55,6 +57,8 @@ class PersonSeeder extends Seeder
             DB::table('peoples')->insert([
                 'first_name' => fake()->name(),
                 'second_name' => fake()->name(),
+                "description" => fake()->paragraph(),
+                "hobbies" => fake()->paragraph(),
             ]);
         }
     }

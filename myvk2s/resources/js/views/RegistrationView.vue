@@ -78,7 +78,7 @@ export default
                     second_name: this.second_name_inp,
                 }).then(res =>
                 {
-                    localStorage["x_xsrf_token"] = res.config.headers["X_XSRF_TOKEN"];
+                    localStorage["x_xsrf_token"] = res.config.headers["X-XSRF-TOKEN"];
                     
                     this.$router.push({name: "peoples"});
                     

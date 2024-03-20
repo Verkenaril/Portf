@@ -68,6 +68,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        
         $jas = Person::create([
             "first_name" => $data["first_name"],
             "second_name" => $data["second_name"],

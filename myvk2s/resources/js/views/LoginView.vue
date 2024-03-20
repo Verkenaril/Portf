@@ -45,8 +45,11 @@ export default
                     password: this.password_inp 
                 }).then(res =>
                 {
-                    localStorage["x_xsrf_token"] = res.config.headers["X_XSRF_TOKEN"];
+                    console.log(localStorage);
+                    localStorage["x_xsrf_token"] = res.config.headers["X-XSRF-TOKEN"];
+                    console.log(localStorage);
                     this.$router.push({name: "peoples"});
+                    console.log(localStorage);
                 }).catch(err => 
                 {
                     if(err)
