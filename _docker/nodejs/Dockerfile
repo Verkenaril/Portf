@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 # Change current user
 # USER node
 
-EXPOSE 5173
+EXPOSE 5000
 
 # CMD ["npm start"]
 # https://github.com/vitejs/vite/discussions/3396
