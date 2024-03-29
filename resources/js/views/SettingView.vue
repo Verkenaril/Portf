@@ -103,7 +103,8 @@ export default
 
                     axios.post("/api/setSetting", form).then(res =>
                     {
-                        this.$router.push({name: "peoples"})  
+                        console.log(res);
+                        // this.$router.push({name: "peoples"})  
                     })
                 })
             }

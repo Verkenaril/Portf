@@ -8,12 +8,12 @@ RUN apt-get update && apt-get install -y \
     curl
 
 
-
+RUN apt-get update && apt-get install -y npm
 
 # Change current user
 # USER node
 
-EXPOSE 5000
+# EXPOSE 5000
 
 # CMD ["npm start"]
 # https://github.com/vitejs/vite/discussions/3396

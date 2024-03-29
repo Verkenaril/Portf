@@ -32,7 +32,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => storage_path('app/public'),
             'throw' => false,
         ],
 
@@ -46,6 +46,17 @@ return [
 
         ],
 
+        // 'public' => [
+        //     'driver' => 'local',
+        //     'root' => public_path(''),
+        //     'url' => env('APP_URL').'/public',
+        //     'url' => env('APP_URL').'/public',
+
+        //     'visibility' => 'public',
+        //     'throw' => false,
+        //     'size_limit' => 10 * 1024
+        // ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
@@ -57,6 +68,11 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
         ],
+        // "mydisk" =>
+        // [
+        //     "driver" => "local",
+        //     "root" => public_path("")
+        // ]
 
     ],
 

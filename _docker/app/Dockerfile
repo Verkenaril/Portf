@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
 
 
 COPY ./_docker/app/php.ini /usr/local/etc/php/conf.d/php.ini
+COPY ./public/storage /var/www/public/
 
 # Install composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
