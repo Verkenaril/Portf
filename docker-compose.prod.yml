@@ -35,7 +35,7 @@ services:
       - ./tmp/db:/var/lib/mysql
     environment:
       MYSQL_DATABASE: myvk
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: mypassnigga
     ports:
       - "7771:3306"  
     container_name: project_db
