@@ -70,6 +70,7 @@ export default
         showGallery()
         {
             this.pageLoader(true);
+            this.filesImg = [];
             axios.get('/sanctum/csrf-cookie').then(res =>
                 {
                     axios.get("/api/getGallery")
