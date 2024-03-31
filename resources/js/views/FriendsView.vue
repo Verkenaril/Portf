@@ -17,6 +17,9 @@
             <div class="item__actions">
                 <button v-on:click="deleteFriend(p.id, p)" class="btn btn-danger">Удалить из друзей</button>
             </div>
+            <div class="item__actions mt-2">
+                <router-link :to="{name: 'chat_user', params: {id: p.id}}" class="btn btn-primary">Написать сообщение</router-link>
+            </div>
         </div>
     </div>
 </div>

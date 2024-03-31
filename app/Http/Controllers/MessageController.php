@@ -132,29 +132,29 @@ class MessageController extends Controller
                 "chat_id" => $chat->id,
             ];
         }
-        // else
-        // {
+        else
+        {
 
-        //     $chat = Chat::firstOrCreate(
-        //         [
-        //             "user_smaller_id" => $b,
-        //             "user_bigger_id" => $a
-        //         ],
-        //         [
-        //             "user_smaller_id" => $b,
-        //             "user_bigger_id" => $a
-        //         ]);
+            $chat = Chat::firstOrCreate(
+                [
+                    "user_smaller_id" => $b,
+                    "user_bigger_id" => $a
+                ],
+                [
+                    "user_smaller_id" => $b,
+                    "user_bigger_id" => $a
+                ]);
 
-        //     $chat = Chat::where("user_smaller_id", $b)->where("user_bigger_id", $a)->first();
+            $chat = Chat::where("user_smaller_id", $b)->where("user_bigger_id", $a)->first();
 
-        //     $data = MessageResource::collection(Chat::find($chat->id)->messages()->get()->sortByDesc("id")->take($howManyMsg)->reverse());
+            $data = MessageResource::collection(Chat::find($chat->id)->messages()->get()->sortByDesc("id")->take($howManyMsg)->reverse());
 
-        //     return [
-        //         "message" => $data,
-        //         "person" => $person,
-        //         "chat_id" => $chat->id
-        //     ];
-        // }
+            return [
+                "message" => $data,
+                "person" => $person,
+                "chat_id" => $chat->id
+            ];
+        }
     }
     public function getMoreMessage(Request $request)
     {

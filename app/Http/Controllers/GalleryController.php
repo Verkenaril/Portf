@@ -16,7 +16,7 @@ class GalleryController extends Controller
         $name_file = $request->file("file1")->hashName();
         $fileType = $request->file("file1")->extension();
 
-        $request->file("file1")->store("public/$user_path/media");
+        $request->file("file1")->store("$user_path/media");
 
         $endedPath = "../storage/$user_path/media/" . $name_file;
         Gallery::create(

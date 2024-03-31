@@ -88,7 +88,6 @@ export default
                 .then(res =>
                 {
                     this.arrMsg = res.data.message;
-                    console.log(res);
                     this.person = res.data.person;
                     this.chatId = res.data.chat_id;
 
