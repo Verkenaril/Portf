@@ -106,7 +106,7 @@ export default
                     .then(res =>
                     {
                         this.showGallery();
-ч                    })
+                    })
                 })
             }
             else
