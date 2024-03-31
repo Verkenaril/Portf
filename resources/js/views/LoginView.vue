@@ -1,5 +1,5 @@
 <template>
-<div class="container" :key="componentKey">
+<div class="container" v-if="!TF" :key="componentKey" >
     <div class="mb-3">
         <input type="email" v-model="email_inp" class="form-control" placeholder="Email">
     </div>
@@ -12,6 +12,9 @@
         <h4 v-if="fail_inp" v-text="message" class="fail">
     </h4>
 </div>
+<div class="container forLoader" v-else>
+    <div class="loader"></div>
+</div>    
 </template>
 
 <script>
@@ -24,16 +27,23 @@ export default
         password_inp: "",
         fail_inp: null,
         componentKey: 0,
+        TF: false,
         }
     },
     methods:
     {
+        pageLoader(el)
+        {
+            this.TF = el;
+        },
         forceRender() 
         {
             this.componentKey++;
         },
         login()
         {
+            this.pageLoader(true);
+
             this.forceRender();
             if(this.checkFillInput() != 1) return 0;
             this.checkExistUser();
@@ -48,6 +58,9 @@ export default
                 {
                     localStorage["test"] = "testsuka";
                     localStorage["x_xsrf_token"] = res.config.headers["X-XSRF-TOKEN"];
+
+
+
                     this.$router.push({name: "peoples"});
                 }).catch(err => 
                 {

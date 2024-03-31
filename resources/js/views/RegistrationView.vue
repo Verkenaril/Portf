@@ -1,5 +1,5 @@
 <template>
- <div class="container">
+ <div class="container" v-if="!TF">
     <div class="mb-3">
         <input v-model="email_inp" type="email" class="form-control" placeholder="Email" required>
     </div>
@@ -25,6 +25,9 @@
     </h4>
 
 </div>
+<div class="container forLoader" v-else>
+    <div class="loader"></div>
+</div>  
 </template>
 
 <script>
@@ -42,6 +45,7 @@ export default
         fail_inp: false,
         message: null,
         saved_token_inp: null,
+        TF: false,
         }
     },
     methods:
@@ -60,12 +64,16 @@ export default
             .then();
             
         },
-
+        pageLoader(el)
+        {
+            this.TF = el;
+        },
         registration()
         {
             this.checkConfPass();
             this.checkFillInput();
             this.checkExistUser();
+            this.pageLoader(true);
             axios.get('/sanctum/csrf-cookie').then(res =>
             {
                 axios.post("/register", 
