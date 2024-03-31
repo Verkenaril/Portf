@@ -88,9 +88,9 @@ class MessageController extends Controller
         broadcast(new MessageEvent($m, $b))->toOthers();
         return response([]);
     }
-    public function getMessage(Request $request)
-    {
 
+    public function getMessage(Request $request)
+    {   
         $chat = null;
         $a = auth("sanctum")->user()->id;
         $b = $request->query("uoi");
@@ -111,6 +111,17 @@ class MessageController extends Controller
         }
         else if($a < $b)
         {
+            $chat = Chat::firstOrCreate(
+                [
+                    "user_smaller_id" => $a,
+                    "user_bigger_id" => $b
+                ],
+                [
+                    "user_smaller_id" => $a,
+                    "user_bigger_id" => $b
+                ]);
+
+
             $chat = Chat::where("user_smaller_id", $a)->where("user_bigger_id", $b)->first();
             
             $data = MessageResource::collection(Chat::find($chat->id)->messages()->get()->sortByDesc("id")->take($howManyMsg)->reverse());
@@ -121,18 +132,29 @@ class MessageController extends Controller
                 "chat_id" => $chat->id,
             ];
         }
-        else
-        {
-            $chat = Chat::where("user_smaller_id", $b)->where("user_bigger_id", $a)->first();
+        // else
+        // {
 
-            $data = MessageResource::collection(Chat::find($chat->id)->messages()->get()->sortByDesc("id")->take($howManyMsg)->reverse());
+        //     $chat = Chat::firstOrCreate(
+        //         [
+        //             "user_smaller_id" => $b,
+        //             "user_bigger_id" => $a
+        //         ],
+        //         [
+        //             "user_smaller_id" => $b,
+        //             "user_bigger_id" => $a
+        //         ]);
 
-            return [
-                "message" => $data,
-                "person" => $person,
-                "chat_id" => $chat->id
-            ];
-        }
+        //     $chat = Chat::where("user_smaller_id", $b)->where("user_bigger_id", $a)->first();
+
+        //     $data = MessageResource::collection(Chat::find($chat->id)->messages()->get()->sortByDesc("id")->take($howManyMsg)->reverse());
+
+        //     return [
+        //         "message" => $data,
+        //         "person" => $person,
+        //         "chat_id" => $chat->id
+        //     ];
+        // }
     }
     public function getMoreMessage(Request $request)
     {
