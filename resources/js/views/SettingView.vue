@@ -89,6 +89,10 @@ export default
             }
             else
             {
+                if(document.querySelectorAll(".form-control")[7].value.length == 0) this.description_inp = " ";
+                if(document.querySelectorAll(".form-control")[6].value.length == 0) this.hobbies_inp = " ";
+                if(document.querySelectorAll(".form-control")[4].value.length == 0) this.country_inp = " ";
+                if(document.querySelectorAll(".form-control")[5].value.length == 0) this.city_inp = " ";
                 axios.get('/sanctum/csrf-cookie').then(res =>
                 {
                     const form = new FormData();
@@ -103,8 +107,7 @@ export default
 
                     axios.post("/api/setSetting", form).then(res =>
                     {
-                        console.log(res);
-                        // this.$router.push({name: "peoples"})  
+                        this.$router.push({name: "peoples"})  
                     })
                 })
             }

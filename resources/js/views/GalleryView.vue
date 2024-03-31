@@ -63,7 +63,7 @@ export default
                     axios.delete(`/api/deleteMedia/${id}`)
                     .then(res =>
                     {
-                        console.log(res);
+                        
                     })
                 })
         },

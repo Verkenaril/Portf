@@ -34,8 +34,6 @@ class SettingController extends Controller
     }
     public function setSetting(Request $request)
     {
-
-        // return public_path();
         $request->validate([
             "first_name_inp" => "nullable|string",
             "second_name_inp" => "nullable|string",
@@ -54,11 +52,7 @@ class SettingController extends Controller
         {
             $path = "u_" . auth("sanctum")->user()->id;
             $name = $request->photo->hashName();
-            // $request->photo->store("/picters/$path", $name, "mydisk");
             $request->photo->storeAs("/$path", $name);
-
-
-
 
             Person::where("id", auth("sanctum")->user()->id)
             ->update(["avatar" => "../storage/$path/$name"]);

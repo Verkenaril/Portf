@@ -39,7 +39,7 @@ export default
             this.checkExistUser();
             axios.get('/sanctum/csrf-cookie').then(res =>
             {
-                console.log(res);
+      
                 axios.post("/login", 
                 {
                     email: this.email_inp,
@@ -53,7 +53,7 @@ export default
                 {
                     if(err)
                     {
-                        console.log(err);
+                        
                         this.message = "Имя пользователя или пароль введены неверно";
                         this.fail_inp = true;
                     } 
@@ -85,7 +85,7 @@ export default
                     this.fail_inp = true;
                 }
             })
-            .catch(err => console.log(err))
+            .catch()
         }
     }
 }

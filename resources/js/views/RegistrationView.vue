@@ -57,7 +57,7 @@ export default
                 first_name: this.first_name_inp,
                 second_name: this.second_name_inp,
             })
-            .then(res => console.log(res.data));
+            .then();
             
         },
 

@@ -28,7 +28,9 @@
     </div>
     <div id="other">
         <div id="other__media">Медиа</div>
-        <div id="gallery">
+        <div id="gallery" class="void-media" v-if="filesImg.length == 0">Пусто
+        </div>
+        <div id="gallery" v-else>
 
             <gallery :images="array_hrefs_img" :index="index" @close="index = null"></gallery>
             <div v-for="(image, imageIndex) in filesImg" class="gallery__item">

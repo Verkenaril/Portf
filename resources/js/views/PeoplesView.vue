@@ -3,6 +3,7 @@
     <div class="loader"></div>
 </div>
 <div class="container" v-else>
+    
 <div class="items">
     <div v-for="p in persons" class="item">
         <div class="avatar">
