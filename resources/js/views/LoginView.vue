@@ -7,7 +7,7 @@
         <input type="password" v-model="password_inp" class="form-control" placeholder="Password">
     </div>
     <div class="mb-3">
-        <input type="submit" v-on:click="login" class="btn btn-primary">
+        <input type="submit" v-on:click="login" class="btn btn-primary" :class="{disabled: !isActiv}">
     </div>
         <h4 v-if="fail_inp" v-text="message" class="fail">
     </h4>
@@ -25,6 +25,7 @@ export default
         password_inp: "",
         fail_inp: null,
         componentKey: 0,
+        isActiv: true,
         }
     },
     methods:

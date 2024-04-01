@@ -19,7 +19,7 @@
         <input v-model="password_confirm_inp" type="password" class="form-control" placeholder="Подтверждение пароля" required>
     </div>
     <div class="mb-3">
-        <input v-on:click="registration" type="submit" class="btn btn-primary">
+        <input v-on:click="registration" type="submit" class="btn btn-primary" :class="{disabled: !isActiv}">
     </div>
     <h4 v-if="fail_inp" v-text="message" class="fail">
     </h4>
@@ -43,7 +43,8 @@ export default
         fail_inp: false,
         message: null,
         saved_token_inp: null,
-        TF: false,
+        isActiv: true,
+
         }
     },
     methods:
@@ -68,6 +69,7 @@ export default
             this.checkConfPass();
             this.checkFillInput();
             this.checkExistUser();
+            this.isActiv = false;
             axios.get('/sanctum/csrf-cookie').then(res =>
             {
                 axios.post("/register", 
