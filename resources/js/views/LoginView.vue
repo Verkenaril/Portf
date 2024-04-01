@@ -40,7 +40,7 @@ export default
             this.forceRender();
             if(this.checkFillInput() != 1) return 0;
             this.checkExistUser();
-
+            this.isActiv = false;
             axios.get('/sanctum/csrf-cookie').then(res =>
             {
                 
