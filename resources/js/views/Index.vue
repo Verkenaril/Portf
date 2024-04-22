@@ -243,8 +243,7 @@ hr
     cursor: pointer;
 }
 
-/* @media (max-width: 600px)
-{
+/* @media (max-width: 605px){
 #content 
 {
   flex-basis: 250px;

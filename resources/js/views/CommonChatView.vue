@@ -180,8 +180,7 @@ export default {
   opacity: 0;
 }
 
-@media (max-width: 600px)
-{
+@media (max-width: 605px){
 .comchat
 {
     flex-direction: column;

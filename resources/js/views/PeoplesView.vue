@@ -121,8 +121,7 @@ export default
 {
     margin-left: 15px;
 }
-@media (max-width: 600px)
-{
+@media (max-width: 605px){
 .item.people
 {
     flex-direction: column;

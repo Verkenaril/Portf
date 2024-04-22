@@ -155,8 +155,7 @@ export default
     color: white;
     font-weight: 500;
 }
-@media (max-width: 600px)
-{
+@media (max-width: 605px){
 #person
 {
   flex-direction: column;
