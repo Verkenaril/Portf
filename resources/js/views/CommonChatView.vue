@@ -186,7 +186,7 @@ export default {
 {
     flex-direction: column;
 }
-.item__pic-comchat, .item__name, .item__descripton
+.item__pic-comchat, .item__descripton
 {
     margin-left: 15px;
 }
