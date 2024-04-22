@@ -39,4 +39,10 @@ class Person extends Model
     {
         return $this->hasMany(Gallery::class, "user_id", "id");
     }
+
+    public function commonchats()
+    {
+        // return $this->hasMany(MembersComChat::class, "id_user", "id");
+        return $this->belongsToMany(CommonChat::class, "members_com_chats", "id_user", "id_chat");
+    }
 }

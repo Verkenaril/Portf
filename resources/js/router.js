@@ -9,6 +9,10 @@ import PersonPageView from "./views/PersonPageView.vue";
 import ChatsView from "./views/ChatsView.vue";
 import MessagesView from "./views/MessagesView.vue";
 import GalleryView from "./views/GalleryView.vue";
+import CommonChatView from "./views/CommonChatView.vue";
+import CommonChatListView from "./views/CommonChatListView.vue";
+
+
 
 import Test1 from "./views/Test1.vue";
 import Test2 from "./views/Test2.vue";
@@ -23,9 +27,11 @@ const routes =
     {path: "/main", name:"main", component: MainPageView},
     {path: "/friends", name:"friends", component: FriendsView},
     {path: "/user/id:id", name:"person_page", component: PersonPageView},
-    {path: "/chats/", name:"chats", component: ChatsView},
-    {path: "/gallery/", name:"gallery", component: GalleryView},
+    {path: "/chats", name:"chats", component: ChatsView},
+    {path: "/gallery", name:"gallery", component: GalleryView},
     {path: "/chat/id:id", name:"chat_user", component: MessagesView},
+    {path: "/comchats", name:"comchats", component: CommonChatView},
+    {path: "/comchatslist", name:"comchatslist", component: CommonChatListView},
     
     {path: "/test1", name:"test1", component: Test1},];
 

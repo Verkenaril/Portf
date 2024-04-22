@@ -6,7 +6,7 @@
 <div v-if="persons == 0" class="void">Пусто</div>
 <div class="items" v-else>
 
-    <div v-for="p in persons" class="item">
+    <div v-for="p in persons" class="item friend">
         <div class="avatar">
             <img :src="p.avatar" alt="" width="150" height="150">
         </div>
@@ -108,4 +108,11 @@ export default
 
 <style>
 
+@media (max-width: 600px)
+{
+.item.friend
+{
+  flex-direction: column;
+}
+}
 </style>

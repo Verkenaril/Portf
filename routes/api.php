@@ -31,11 +31,13 @@ Route::group(["middleware" => "auth:sanctum"], function()
     Route::get("/getMessage", [App\Http\Controllers\MessageController::class, "getMessage"]);
     Route::get("/getMoreMessage", [App\Http\Controllers\MessageController::class, "getMoreMessage"]);
     Route::get("/getGallery", [App\Http\Controllers\GalleryController::class, "showGallery"]);
-    
+    Route::get("/getComChat", [App\Http\Controllers\CommonChatController::class, "showComChat"]);
 
     Route::delete("/deleteMedia/{id}", [App\Http\Controllers\GalleryController::class, "delMedia"]);
     Route::delete("/deleteFriend/{id}", [App\Http\Controllers\FriendController::class, "deleteFriend"]);
     
+
+    Route::post("/createComChat", [App\Http\Controllers\CommonChatController::class, "createComChat"]);
     Route::post("/addFriend/{id}", [App\Http\Controllers\FriendController::class, "addFriend"]);
     Route::post("/setSetting", [App\Http\Controllers\SettingController::class, "setSetting"]);
     Route::post("/sendMessage", [App\Http\Controllers\MessageController::class, "sendMessage"]);

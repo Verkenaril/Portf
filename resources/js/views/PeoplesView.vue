@@ -5,7 +5,7 @@
 <div class="container" v-else>
     
 <div class="items">
-    <div v-for="p in persons" class="item">
+    <div v-for="p in persons" class="item people">
         <div class="avatar">
             <img :src="p.avatar" alt="" width="150" height="150">
         </div>
@@ -120,5 +120,13 @@ export default
 .actions
 {
     margin-left: 15px;
+}
+@media (max-width: 600px)
+{
+.item.people
+{
+    flex-direction: column;
+}
+
 }
 </style>

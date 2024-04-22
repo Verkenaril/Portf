@@ -99,6 +99,7 @@ class MessageController extends Controller
 
         $person = new PeopleResource(Person::find($b));
 
+        //если чат существует, то вытаскиваем сообщения
         if($c != 0)
         {
             $data = MessageResource::collection(Chat::find($c)->messages()->get()->sortByDesc("id")->take($howManyMsg)->reverse());

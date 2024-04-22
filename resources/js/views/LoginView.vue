@@ -51,7 +51,7 @@ export default
                 }).then(res =>
                 {
                     
-                    localStorage["test"] = "testsuka";
+                    
                     localStorage["x_xsrf_token"] = res.config.headers["X-XSRF-TOKEN"];
 
                     this.$router.push({name: "peoples"});
@@ -63,6 +63,7 @@ export default
 
                         this.message = "Имя пользователя или пароль введены неверно";
                         this.fail_inp = true;
+                        this.isActiv = true;
                     } 
                 })
             })
