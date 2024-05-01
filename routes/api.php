@@ -32,11 +32,16 @@ Route::group(["middleware" => "auth:sanctum"], function()
     Route::get("/getMoreMessage", [App\Http\Controllers\MessageController::class, "getMoreMessage"]);
     Route::get("/getGallery", [App\Http\Controllers\GalleryController::class, "showGallery"]);
     Route::get("/getComChat", [App\Http\Controllers\CommonChatController::class, "showComChat"]);
+    Route::get("/getPosts", [App\Http\Controllers\PostController::class, "getPosts"]);
+    Route::get("/getPostsUser/{id}", [App\Http\Controllers\PostController::class, "getPostsUser"]);
 
+    Route::delete("/deletePost/{id}", [App\Http\Controllers\PostController::class, "deletePost"]);
     Route::delete("/deleteMedia/{id}", [App\Http\Controllers\GalleryController::class, "delMedia"]);
     Route::delete("/deleteFriend/{id}", [App\Http\Controllers\FriendController::class, "deleteFriend"]);
     
+    Route::put("/savePost", [App\Http\Controllers\PostController::class, "savePost"]);
 
+    Route::post("/createPost", [App\Http\Controllers\PostController::class, "createPost"]);
     Route::post("/createComChat", [App\Http\Controllers\CommonChatController::class, "createComChat"]);
     Route::post("/addFriend/{id}", [App\Http\Controllers\FriendController::class, "addFriend"]);
     Route::post("/setSetting", [App\Http\Controllers\SettingController::class, "setSetting"]);

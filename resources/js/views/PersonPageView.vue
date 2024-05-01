@@ -27,20 +27,24 @@
     </div>
 
     <div id="other">
-        <div id="other__media">Медиа</div>
-        <div id="gallery" class="void-media" v-if="filesImg.length == 0">Пусто
-        </div>
-        <div id="gallery" v-else>
+        <div id="other__media">
+            <div id="other__media-title" class="other__title">Медиа</div>
+            <div id="gallery" class="void-content" v-if="filesImg.length == 0">Пусто
+            </div>
+            <div id="gallery" v-else>
 
-            <gallery :images="array_hrefs_img" :index="index" @close="index = null"></gallery>
-            <div v-for="(image, imageIndex) in filesImg" class="gallery__item">
-                <div class="image"
-                    :key="imageIndex"
-                    @click="index = imageIndex"
-                    :style="{ backgroundImage: 'url(' + image.file + ')', width: '75px', height: '50px' }">
+                <gallery :images="array_hrefs_img" :index="index" @close="index = null"></gallery>
+                <div v-for="(image, imageIndex) in filesImg" class="gallery__item">
+                    <div class="image"
+                        :key="imageIndex"
+                        @click="index = imageIndex"
+                        :style="{ backgroundImage: 'url(' + image.file + ')', width: '75px', height: '50px' }">
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <post-component :allposts="posts"></post-component>
     </div>
 </div>
 </template>
@@ -48,6 +52,7 @@
 <script>
 import axios from "axios";
 import VueGallery from 'vue-gallery';
+import PostComponent from "../components/PostComponent.vue";
 
 export default
 {
@@ -61,6 +66,7 @@ export default
         hobbies_inp: null,
         avatar_src: null,
         cities: null,
+        posts: [],
         
         filesImg: [],
         array_hrefs_img: [],
@@ -69,13 +75,25 @@ export default
         TF: true,
     }},
     components: {
-        'gallery': VueGallery
+        'gallery': VueGallery,
+        PostComponent
         },
     methods: 
     {
         pageLoader(el)
         {
             this.TF = el;
+        },
+        getPost_fn()
+        {
+            axios.get('/sanctum/csrf-cookie').then(res =>
+            {
+                axios.get(`/api/getPostsUser/${this.$route.params.id}`)
+                .then(res =>
+                {   
+                    this.posts = res.data;
+                })
+            })
         },
         getSetting()
         {
@@ -123,22 +141,5 @@ export default
 </script>
 
 <style>
-#other__media
-{
-    background-color: #0d6efd7d;
-    padding: 5px;
-    color: white;
-    font-weight: 500;
-}
-.void-media
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30px;
-    color: #c9c9c9;
-}
+
 </style>

@@ -18,6 +18,11 @@
     <div class="mb-3">
         <input v-model="password_confirm_inp" type="password" class="form-control" placeholder="Подтверждение пароля" required>
     </div>
+    
+    <div class="mb-3">
+        <img src="/img/antwort.png" alt="" class="mb-3">
+        <input v-model="antwort_inp" type="text" class="form-control" placeholder="Решите пример и дайте ответ" required>
+    </div>
     <div class="mb-3">
         <input v-on:click="registration" type="submit" class="btn btn-primary" :class="{disabled: !isActiv}">
     </div>
@@ -44,7 +49,7 @@ export default
         message: null,
         saved_token_inp: null,
         isActiv: true,
-
+        antwort_inp: null,
         }
     },
     methods:
@@ -69,6 +74,7 @@ export default
             this.checkConfPass();
             this.checkFillInput();
             this.checkExistUser();
+            this.checkAntwort();
             this.isActiv = false;
             axios.get('/sanctum/csrf-cookie').then(res =>
             {
@@ -128,6 +134,16 @@ export default
                     throw this.message;
                 }
             })
+        },
+        checkAntwort()
+        {
+            if(this.antwort_inp == 90) this.fail_inp = false;
+            else
+            {
+                this.message = "Ответ не верный";
+                this.fail_inp = true;
+                throw this.message;
+            }
         }
     },
 }

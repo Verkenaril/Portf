@@ -11,6 +11,7 @@ import MessagesView from "./views/MessagesView.vue";
 import GalleryView from "./views/GalleryView.vue";
 import CommonChatView from "./views/CommonChatView.vue";
 import CommonChatListView from "./views/CommonChatListView.vue";
+import PostView from "./views/PostView.vue";
 
 
 
@@ -32,7 +33,9 @@ const routes =
     {path: "/chat/id:id", name:"chat_user", component: MessagesView},
     {path: "/comchats", name:"comchats", component: CommonChatView},
     {path: "/comchatslist", name:"comchatslist", component: CommonChatListView},
+    {path: "/posts", name:"posts", component: PostView},
     
+
     {path: "/test1", name:"test1", component: Test1},];
 
 const router = createRouter({

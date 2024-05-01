@@ -29,6 +29,63 @@ html, body
     border: 2px solid red;
     text-align: center;
 }
+#other
+{
+  max-width: 426px;
+  word-wrap: break-word;
+}
+.other__title
+{
+    background-color: #0d6efd7d;
+    padding: 5px;
+    color: white;
+    font-weight: 500;
+}
+.other__post-item
+{
+    margin-left: 10px;
+}
+.other__post-title
+{
+    text-align: center;
+    font-family: cursive;
+    font-size: 20px;
+    background-color: #add8e67d;
+    color: #818181;
+}
+.other__post-body
+{
+    margin: 0; 		
+    -webkit-line-clamp: 2; 	
+    display: -webkit-box; 	
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.other__post-body-open
+{
+    display: block; 	
+}
+.other__post-more
+{
+    text-align: right;
+    cursor: default;
+    color: lightblue;
+}
+.other__post-more:hover
+{
+    color: blue;
+}
+.void-content
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    color: #c9c9c9;
+}
 .item
 {
     display: flex;

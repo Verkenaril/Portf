@@ -1,7 +1,7 @@
 <template>
 <Transition>
 <div id="create-chat-label" v-if="show">
-    <div id="create-chat-form" >
+    <div id="create-chat-form">
         <div class="mb-3">
             <label for="name_chat" class="form-label" >Название чата</label>
             <input type="text" id="name_chat" class="form-control" v-model="name_chat_inp">

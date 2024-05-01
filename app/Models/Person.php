@@ -45,4 +45,8 @@ class Person extends Model
         // return $this->hasMany(MembersComChat::class, "id_user", "id");
         return $this->belongsToMany(CommonChat::class, "members_com_chats", "id_user", "id_chat");
     }
+    public function posts()
+    {
+        return $this->hasMany(Post::class, "user_id", "id");
+    }
 }

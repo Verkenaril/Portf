@@ -36,4 +36,8 @@ class GetPeoplesController extends Controller
         "media" => GalleryResource::collection(Person::find($id)->gallery()->get())->resolve()
         ];
     }
+    public function getPostsUser(string $id)
+    {
+        return Person::find($id)->posts()->get();
+    }
 }
