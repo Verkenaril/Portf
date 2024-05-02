@@ -213,6 +213,10 @@ export default {
 {
     width: 70%;
 }
+#create-post-form 
+{
+    width: 90%;
+}
 }
 
 </style>
