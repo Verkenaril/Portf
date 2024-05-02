@@ -165,10 +165,11 @@ export default
     text-align: center;
     padding: 0 4px 0 4px;
 }
-@media (max-width: 605px){
+@media (max-width: 605px)
+{
 #person
 {
-  flex-direction: column;
+    flex-direction: column;
 }
 }
 </style>

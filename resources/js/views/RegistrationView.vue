@@ -20,7 +20,7 @@
     </div>
     
     <div class="mb-3">
-        <img src="/img/antwort.png" alt="" class="mb-3">
+        <img src="/img/antwort.png" alt="" class="antwort mb-3">
         <input v-model="antwort_inp" type="text" class="form-control" placeholder="Решите пример и дайте ответ" required>
     </div>
     <div class="mb-3">
@@ -150,5 +150,9 @@ export default
 </script>
 
 <style>
+.antwort
+{
+    width: 100%;
+}
 
 </style>

@@ -206,4 +206,13 @@ export default {
 .v-leave-to {
   opacity: 0;
 }
+
+@media (max-width: 605px)
+{
+#person
+{
+    width: 70%;
+}
+}
+
 </style>
