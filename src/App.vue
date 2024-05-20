@@ -4,15 +4,12 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-import CardGame from './components/CardGame.vue';
+
 import CardGame2 from './components/CardGame2.vue';
 
 export default {
     name: 'App',
     components: {
-        HelloWorld,
-        CardGame,
         CardGame2,
     },
     data(){ return {
