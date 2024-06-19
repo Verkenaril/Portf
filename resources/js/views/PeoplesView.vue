@@ -113,8 +113,9 @@ export default
 
 .avatar img
 {
-    border: 1px solid rgb(121, 121, 121);
     object-fit: contain;
+    border: 1px solid black;
+    border-radius: 25%;
 }
 
 .actions
