@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,10 +23,7 @@ Auth::routes();
 
 
 Route::get('/testim', function () {
-    
-    dd(Chat::find(1)->messages()->get()->sortByDesc("id")->skip(40)->take(10)->reverse());
-    // dd(get_class_methods(Chat::find(1)->messages()->get()));
-     return view('main'); 
+    return view("test");
     });
 
 Route::get('{page}', function () { return view('main'); })->where("page", ".*");

@@ -187,6 +187,7 @@ export default {
     white-space: nowrap; 	
     overflow: hidden; 		
     text-overflow: ellipsis; 
+
 }
 .card-text:focus, .card-title:focus
 {
@@ -217,6 +218,42 @@ export default {
 {
     width: 90%;
 }
+.card-text
+{
+
 }
+}
+@media (max-width: 501px)
+{
+    .card-text
+    {
+        width: 300px;
+    }
+}
+@media (max-width: 450px)
+{
+    .card-text
+    {
+        width: 235px;
+    }
+}
+
+@media (max-width: 391px)
+{
+
+    .card-text
+    {
+        width: 220px;
+    }
+}
+
+@media (max-width: 360px)
+{
+    .card-text
+    {
+        width: 190px;
+    }
+}
+
 
 </style>

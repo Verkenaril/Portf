@@ -19,7 +19,7 @@ export default {
     {
         showMore(i)
         {
-            console.log(this.$refs.el[i]);
+
 
             this.$refs.el[i].classList.add("other__post-body-open");
             this.$refs.el_btn[i].style = "display: none";
@@ -28,5 +28,19 @@ export default {
 }
 </script>
 <style>
+@media (max-width: 512px)
+{
+.other__post-item
+{
+    width: 80vw;
+}
+}
 
+@media (max-width: 397px)
+{
+.other__post-item
+{
+    width: 74vw;
+}
+}
 </style>

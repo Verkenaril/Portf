@@ -46,6 +46,7 @@ const router = createRouter({
 router.beforeEach((to, from) => 
 {
     const token = localStorage["x_xsrf_token"];
+
     if(!token)
     {
         if(to.name === "login" || to.name === "registration") return null;
