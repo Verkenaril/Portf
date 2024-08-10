@@ -2,6 +2,7 @@ body {
     background-color: #2d2d2d;
     color: #ffc266;
     font-family: 'Roboto', sans-serif;
+    
 }
 
 #progress-bar {
@@ -177,10 +178,12 @@ input[type="range"]
 {
     width: 700px;
 }
-#content__actions
+#content__actions, #content__results
 {
     width: 700px;
+    
 }
+
 .menu__element
 {
     text-align: center;
@@ -339,6 +342,23 @@ input[type="file"]
 	margin: 0;
 	transition: background-color 0.2s;
 }
+#btn-load-more
+{
+	cursor: pointer;
+	outline: none;
+	font-size: 14px;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 4px;
+	background-color: #419152;
+	line-height: 22px;
+	height: 40px;
+	box-sizing: border-box;
+	border: none;
+	transition: background-color 0.2s;
+    margin: 15px 0 0 0;
+    width: 100%;
+}
 
 .input-file input[type=file] 
 {
@@ -363,6 +383,8 @@ input[type="file"]
     display: inline-block;
 }
 
+
+
 /* Focus */
 .input-file input[type=file]:focus + span {
 	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
@@ -376,7 +398,7 @@ input[type="file"]
 	background-color: #2E703A;
 }
  
-#send-file-btn:hover
+#send-file-btn:hover, #btn-load-more:hover
 {
     background-color: #59be6e;
 }

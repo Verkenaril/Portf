@@ -69,7 +69,7 @@ function getPlayerList(query)
                     e.addEventListener("click", runTargetTrack);
                     ch++;
                 } 
-            loadTrack(0);
+            // loadTrack(0);
         })
 }
 
@@ -480,7 +480,12 @@ function returnBack_fn()
     setTimeout(function() 
     {
         document.getElementById("menu").style.display = "flex";
-        document.getElementById("content-inner").innerHTML = '<div id="content__actions"></div><div id="content__results"></div><div id="content__animation"></div>'; 
+        document.getElementById("content-inner").innerHTML = 
+        `
+        <div id="content__actions"></div>
+        <div id="content__animation"></div>
+        <div id="content__results"></div>
+        `; 
     }, animate_duration);
     window.stop();
 }
@@ -533,6 +538,7 @@ function search_btn_fn()
     
     content_div.innerHTML += createBackBtn_fn(); // 1 set
     content_div.innerHTML += search_html; // 2 set
+    
 }
 
 function callAnimateOnElement(callFunction, animate_duration = 300)
@@ -651,7 +657,7 @@ function getFavoriteList()
                 e.addEventListener("click", runTargetTrack);
                 ch++;
             } 
-        loadTrack(0);
+        // loadTrack(0);
     }
     )
     
@@ -687,21 +693,26 @@ function add_btn_fn()
             <input type="file" name="file[]" multiple id="i-f" class="i-f" onchange="inputOnChangee(this)">		
             <span>Выберите файлы</span>
         </label>
-        <input type ="button" value="Отправить" id="send-file-btn" onclick="callAnimateOnElement(send_file())">
-        <div class="input-file-list" id="input-file-list" ></div>
+        <input type ="button" value="Отправить" id="send-file-btn" onclick="callAnimateOnElement(send_file)">
     </div>`;
+
+    document.getElementById("content__results").innerHTML = `<div class="input-file-list" id="input-file-list"></div>`;
 
 }
 
 function send_file()
 {
 
-    document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
-    document.getElementById("content__results").innerHTML = "";
-
     let input_file = document.getElementById("i-f");
-    if(input_file.files.length == 0) return alert("Сначала добавьте файлы");
+    if(input_file.files.length == 0)
     
+        return alert("Сначала добавьте файлы");
+    else
+    {
+        document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
+        document.getElementById("content__results").innerHTML = "";
+    }
+
     for(let file of input_file.files)
     {
         if(file.type != "audio/mpeg") return alert("Только формат mp3");

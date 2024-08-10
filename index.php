@@ -19,7 +19,7 @@ if(!$_SESSION["user_uid"]) $_SESSION["user_uid"] = rand(0, 10000) . "_" . time()
 
     </head>
 <body>
-
+<div id="version"></div>
 <div id="wrapper">
 
 
@@ -96,8 +96,9 @@ if(!$_SESSION["user_uid"]) $_SESSION["user_uid"] = rand(0, 10000) . "_" . time()
     <div id="content">
         <div id="content-inner">
             <div id="content__actions"></div>
-            <div id="content__results"></div>
             <div id="content__animation"></div>
+            <div id="content__results"></div>
+            
           </div>  
         </div>
     </div>
