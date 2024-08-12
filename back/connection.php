@@ -7,7 +7,7 @@ $options =
 ];
 try
 {
-    $connection = new PDO("mysql:host=localhost;dbname=test;charset=utf8", "root", "", $options);
+    $connection = new PDO("mysql:host=http://83.222.11.85:7771;dbname=audiojs;charset=utf8", "nigga", "mypassnigga", $options);
 }
 catch(PDOException $e)
 {

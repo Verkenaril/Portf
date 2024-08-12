@@ -9,7 +9,6 @@ services:
       - "7779:80"
     container_name: p_nginx
 
-
   app:
     build:
       context: .
