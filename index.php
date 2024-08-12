@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 session_start();
 
 if(!$_SESSION["user_uid"]) $_SESSION["user_uid"] = rand(0, 10000) . "_" . time();

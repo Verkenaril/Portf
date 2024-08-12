@@ -11,27 +11,71 @@ let list1 =
 [
     {
         id: 0,
-        name: "Powerwolf",
-        file: "http://playerj/files/vuega.wav",
-        duration: "02:42"
+        name: "Пропаганда - Мелом",
+        file: "files/Пропаганда - Мелом.mp3",
+        duration: "03:24"
     },
     {
-        id: 1,
-        name: "Artist 1 - audio 1",
-        file: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3",
-        duration: "08:47"
-    },
-    {
-        id: 2,
-        name: "Artist 2 - audio 2",
-        file: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
-        duration: "05:53"
+        id: 8,
+        name: "Юные смешные голоса",
+        file: "files/Юные смешные голоса.mp3",
+        duration: "04:33"
     },
     {
         id: 3,
-        name: "Celtic & North Music  WARRIORS OF ERAST ¦ by Ian Fontova Valero",
-        file: "files/Celtic & North Music  WARRIORS OF ERAST ¦ by Ian Fontova Valero.mp3",
-        duration: "03:50"
+        name: "Погасли свечи",
+        file: "files/Погасли свечи.mp3",
+        duration: "03:55"
+    },
+    {
+        id: 1,
+        name: "DaBro - Юность",
+        file: "files/DaBro - Юность.mp3",
+        duration: "03:39"
+    },
+    {
+        id: 2,
+        name: "AP$ENT - Можно я с тобой",
+        file: "files/AP$ENT - Можно я с тобой.mp3",
+        duration: "02:13"
+    },
+
+    {
+        id: 4,
+        name: "Sabaton - Barbariki",
+        file: "files/Sabaton - Barbariki.mp3",
+        duration: "03:15"
+    },
+    {
+        id: 5,
+        name: "Январская Вьюга",
+        file: "files/Январская Вьюга.wav",
+        duration: "02:42"
+    },
+    {
+        id: 6,
+        name: "И вновь продолжается бой",
+        file: "files/И вновь продолжается бой.mp3",
+        duration: "03:49"
+    },
+
+    // {
+    //     id: 1,
+    //     name: "Artist 1 - audio 1",
+    //     file: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3",
+    //     duration: "08:47"
+    // },
+    // {
+    //     id: 2,
+    //     name: "Artist 2 - audio 2",
+    //     file: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+    //     duration: "05:53"
+    // },
+    {
+        id: 7,
+        name: "Sabaton - Гимн Наемников",
+        file: "files/Sabaton - Гимн Наемников.mp3",
+        duration: "03:02"
     },
     
 ];
@@ -388,6 +432,7 @@ function onTimeUpdate()
     if(player_access.audio_tag.ended && player_audio.currentTrack.index < (player_audio.trackList.length-1))
     {
         let nextIndex = +player_audio.currentTrack.index + 1;
+        updateStylePlayer(0);
         loadTrack(nextIndex);
         setCurrentTrackInPlayerAudio(document.getElementById(player_audio.different_info.div_track + "-" + nextIndex));
         playPause();
