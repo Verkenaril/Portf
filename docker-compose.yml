@@ -14,7 +14,7 @@ services:
       context: .
       dockerfile: _docker/app/Dockerfile
     volumes:
-      - ./:/var/www/audiojs
+      - ./:/var/www/
       - ./_docker/app/php.ini:/usr/local/etc/php/php.ini
       - ./sessi:/tmp    
     container_name: p_app
