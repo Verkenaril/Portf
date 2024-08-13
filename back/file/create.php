@@ -10,7 +10,7 @@ function create($connection)
     $duration;
     foreach($_FILES as $key => $value)
     {
-        move_uploaded_file($_FILES[$key]["tmp_name"], "D:\\Proga\\OpenServer\\domains\\playerj\\files\\" . $_FILES[$key]["name"]);
+        move_uploaded_file($_FILES[$key]["tmp_name"], "var/www/files/" . $_FILES[$key]["name"]);
         $mp3file = new MP3File("../../files/" . $_FILES[$key]["name"]);
         $duration2 = $mp3file->getDuration();//(slower) for VBR (or CBR)
         $justvar1 = MP3File::formatTime($duration2);
