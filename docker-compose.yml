@@ -2,7 +2,7 @@ services:
   nginx:
     image: nginx
     volumes: 
-      - ./:/var/www/
+      - ./:/var/www/audiojs
       - ./_docker/nginx/conf.d/:/etc/nginx/conf.d
     restart: always
     ports: 
