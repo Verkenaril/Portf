@@ -3,7 +3,7 @@ services:
     image: nginx
     volumes: 
       - ./:/var/www/audiojs
-      - ./_docker/nginx/conf.d/:/etc/nginx/conf.d
+      # - ./_docker/nginx/conf.d/:/etc/nginx/conf.d
     restart: always
     ports: 
       - "7779:80"
