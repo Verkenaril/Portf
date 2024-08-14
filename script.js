@@ -749,9 +749,7 @@ function send_file()
 {
 
     let input_file = document.getElementById("i-f");
-    if(input_file.files.length == 0)
-    
-        return alert("Сначала добавьте файлы");
+    if(input_file.files.length == 0) return alert("Сначала добавьте файлы");
     else
     {
         document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
@@ -779,8 +777,9 @@ function send_file()
             body: formData
         }
     )
-    .then(r =>
+    .then(res =>
         {
+            res.json();
             document.getElementById("content__results").innerHTML = "";
             document.getElementById("content__animation").innerHTML = "";    
             document.getElementById("back-btn").click();
