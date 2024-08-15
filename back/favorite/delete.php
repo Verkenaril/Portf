@@ -1,6 +1,6 @@
 <?php
 session_start();
-header("Content-Type: json/application");
+header("Content-Type: application/json");
 
 require("../connection.php");
 
