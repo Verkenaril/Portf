@@ -8,7 +8,7 @@ require("../connection.php");
 function read($connection)
 {
     $user_uid = $_SESSION["user_uid"];
-    $sql = "SELECT * FROM favorite";
+    $sql = "SELECT * FROM favorite WHERE user = '$user_uid'";
 
     $query = $connection->prepare($sql);
     $query->execute();

@@ -10,10 +10,7 @@ function create($connection)
     $nameTrack = $_GET["q"];
     $user_uid = $_SESSION["user_uid"];
     
-    $file = "../../files/$nameTrack.mp3";
-
-
-
+    $file = "files/$nameTrack.mp3";
 
     $mp3file = new MP3File($file);
     $duration2 = $mp3file->getDuration();//(slower) for VBR (or CBR)
