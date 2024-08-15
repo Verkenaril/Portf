@@ -747,11 +747,6 @@ function add_btn_fn()
 
 function send_file()
 {
-    fetch("http://83.222.11.85:7779/back/file/create.php")
-    .then(res => res.json())
-    .then(data => console.log(data))
-
-    return;
 
     let input_file = document.getElementById("i-f");
     if(input_file.files.length == 0) return alert("Сначала добавьте файлы");
@@ -782,12 +777,10 @@ function send_file()
             body: formData
         }
     )
-    .then(res =>
-    {
+    .then(res => {
         res.json();
     })
-    .then(data =>
-    {
+    .then(data => {
         console.log(data);
         document.getElementById("content__results").innerHTML = "";
         document.getElementById("content__animation").innerHTML = "";    
