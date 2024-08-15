@@ -770,26 +770,20 @@ function send_file()
         formData.append(i, input_file.files[i]);
     }
 
-    
     fetch("http://83.222.11.85:7779/back/file/create.php",
         {
             method: "POST",
             body: formData
         }
     )
-    .then(res => {
-        res.json();
-    })
-    .then(data => {
+    .then(res => res.json())
+    .then( data =>
+    {
         console.log(data);
         document.getElementById("content__results").innerHTML = "";
-        document.getElementById("content__animation").innerHTML = "";    
+        document.getElementById("content__animation").innerHTML = "";
         document.getElementById("back-btn").click();
-
     })
-    
-
-
 }
 
 function inputOnChangee(e)
