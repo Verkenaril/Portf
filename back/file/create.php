@@ -1,6 +1,6 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-header("Content-Type: json/application");
+header("Content-Type: application/json");
 
 
 require("../connection.php");
@@ -17,7 +17,7 @@ function create($connection)
     foreach($_FILES as $key => $value)
     {
         
-        move_uploaded_file($_FILES[$key]["tmp_name"], "/var/www/files/" . $_FILES[$key]["name"]);
+        move_uploaded_file($_FILES[$key]["tmp_name"], "../../files/" . $_FILES[$key]["name"]);
         $mp3file = new MP3File("../../files/" . $_FILES[$key]["name"]);
         $duration2 = $mp3file->getDuration();//(slower) for VBR (or CBR)
         $justvar1 = MP3File::formatTime($duration2);
