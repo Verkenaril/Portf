@@ -778,12 +778,17 @@ function send_file()
         }
     )
     .then(res =>
-        {
-            res.json();
-            document.getElementById("content__results").innerHTML = "";
-            document.getElementById("content__animation").innerHTML = "";    
-            document.getElementById("back-btn").click();
-        })
+    {
+        res.json();
+    })
+    .then(data =>
+    {
+        console.log(data);
+        document.getElementById("content__results").innerHTML = "";
+        document.getElementById("content__animation").innerHTML = "";    
+        document.getElementById("back-btn").click();
+
+    })
     
 
 

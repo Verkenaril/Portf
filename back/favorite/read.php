@@ -2,6 +2,7 @@
 session_start();
 header("Content-Type: json/application");
 
+
 require("../connection.php");
 
 
