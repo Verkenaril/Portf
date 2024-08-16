@@ -752,7 +752,7 @@ function send_file()
     if(input_file.files.length == 0) return alert("Сначала добавьте файлы");
 
     let size_files = 0;
-    for(let file of input_file.files) size_files += +size_files + file.size;
+    for(let file of input_file.files) size_files += file.size;
     if(size_files > 20_971_520) return alert("Не более 20 МБ");
 
     for(let file of input_file.files) if(file.type != "audio/mpeg") return alert("Только формат mp3");
