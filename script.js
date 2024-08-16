@@ -760,7 +760,15 @@ function send_file()
     {
         if(file.type != "audio/mpeg") return alert("Только формат mp3");
     }
+    let size_files = 0;
+    for(let file of input_file.files)
+    {
+        size_files += +size_files + file.size;
+    }
+    if(size_files > 20_971_520) return alert("Не более 20 МБ");
+    console.log(size_files);
     
+    return;
     let formData = new FormData();
     console.log(input_file.files);
     
