@@ -750,25 +750,18 @@ function send_file()
 
     let input_file = document.getElementById("i-f");
     if(input_file.files.length == 0) return alert("Сначала добавьте файлы");
-    else
-    {
-        document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
-        document.getElementById("content__results").innerHTML = "";
-    }
 
-    for(let file of input_file.files)
-    {
-        if(file.type != "audio/mpeg") return alert("Только формат mp3");
-    }
     let size_files = 0;
-    for(let file of input_file.files)
-    {
-        size_files += +size_files + file.size;
-    }
+    for(let file of input_file.files) size_files += +size_files + file.size;
     if(size_files > 20_971_520) return alert("Не более 20 МБ");
-    console.log(size_files);
+
+    for(let file of input_file.files) if(file.type != "audio/mpeg") return alert("Только формат mp3");
+
+
+    document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
+    document.getElementById("content__results").innerHTML = "";
+
     
-    return;
     let formData = new FormData();
     console.log(input_file.files);
     
