@@ -312,7 +312,6 @@ function changeTrackList(l)
 }
 function playPause()
 {
-
     if(player_access.audio_tag.paused)
     {
         updateStylePlayer(1);
