@@ -676,6 +676,8 @@ function renderFavoriteTrackList(obj)
 }
 function getFavoriteList()
 {
+    document.getElementById("content").style.display = "block";
+
     document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
     document.getElementById("content__results").innerHTML = "";
 
@@ -728,7 +730,8 @@ let chi = 0;
 function add_btn_fn()
 {
     document.getElementById("menu").style.display = "none";
-    
+    document.getElementById("content").style.display = "block";
+
     let content_div = document.getElementById("content__actions"); 
     
     content_div.innerHTML += createBackBtn_fn(); // 1 set
