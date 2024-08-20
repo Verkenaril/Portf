@@ -499,7 +499,8 @@ function previous()
 
 function returnBack_fn()
 {
-    
+    document.getElementById("content").style.display = "none";
+
     player_audio.trackList = list1;
     if(!player_access.audio_tag.paused) playPause();
     loadTrack(0);
@@ -570,6 +571,7 @@ function searchTrack()
 
 function search_btn_fn()
 {
+    document.getElementById("content").style.display = "block";
     let search_html =
     `
     <div id="search">
@@ -710,7 +712,6 @@ function getFavoriteList()
 function favorite_btn_fn()
 {
     document.getElementById("menu").style.display = "none";
-    
     let content_div = document.getElementById("content__actions"); 
     
     content_div.innerHTML += createBackBtn_fn(); // 1 set
