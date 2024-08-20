@@ -88,7 +88,7 @@ function getPlayerList(query)
     document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
     document.getElementById("content__results").innerHTML = "";
     
-    fetch(`http://83.222.11.85:7771/back/file/read.php?q=${query}`)
+    fetch(`http://83.222.11.85:7779/back/file/read.php?q=${query}`)
     .then(response => response.json())
     .then(tracks =>
         {
@@ -633,7 +633,7 @@ async function addFavorite(e)
     document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
     document.getElementById("content__results").innerHTML = "";
 
-    await fetch(`http://83.222.11.85:7771/back/favorite/create.php?q=${query}`)
+    await fetch(`http://83.222.11.85:7779/back/favorite/create.php?q=${query}`)
     .then(res => res.json())
     .then(e => console.log(e));
     searchTrack();
@@ -655,7 +655,7 @@ async function delFavorite(e)
     let query = document.getElementById("n-" + num).innerHTML;
     document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
     document.getElementById("content__results").innerHTML = "";
-    await fetch(`http://83.222.11.85:7771/back/favorite/delete.php?q=${query}`);
+    await fetch(`http://83.222.11.85:7779/back/favorite/delete.php?q=${query}`);
     getFavoriteList();
 }
 
@@ -684,7 +684,7 @@ function getFavoriteList()
     document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
     document.getElementById("content__results").innerHTML = "";
 
-    fetch("http://83.222.11.85:7771/back/favorite/read.php")
+    fetch("http://83.222.11.85:7779/back/favorite/read.php")
     .then(res => res.json())
     .then(tracks =>
     { 
@@ -778,7 +778,7 @@ function send_file()
         formData.append(i, input_file.files[i]);
     }
 
-    fetch("http://83.222.11.85:7771/back/file/create.php",
+    fetch("http://83.222.11.85:7779/back/file/create.php",
         {
             method: "POST",
             body: formData
