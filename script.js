@@ -270,6 +270,7 @@ setCurrentTrackInPlayerAudio(player_audio.currentTrack.element);
 
 function runTargetTrack(e)
 {
+    // это условие нужно, чтобы при клике по "звезде" не происходило включения//выключения
     if(e.currentTarget == e.target)
     {
         if(player_audio.currentTrack.index != "") updateStylePlayer(0);

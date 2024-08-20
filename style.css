@@ -350,7 +350,7 @@ input[type="file"]
 }
 #btn-load-more
 {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 	cursor: pointer;
@@ -486,3 +486,67 @@ input[type="file"]
         transform: rotate(360deg);
     }
     } 
+
+
+@media screen and (width < 880px)
+{
+    #wrapper 
+{
+    flex-wrap: wrap
+}
+#menu 
+{
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    background-color: #6e6e6e;
+    justify-content: center;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+#container 
+{
+    margin: 0;
+    align-self: flex-start;
+}
+
+.menu__element 
+{
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+}
+.m_e 
+{
+    font-size: 20px;
+}
+#content 
+{
+    position: absolute;
+    left: 0;
+    top: 138px;
+    background-color: #373737;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+
+}
+.playlist-info-track 
+{
+    flex-grow: 1;
+}
+#progress-bar 
+{
+     width: 100%;
+}
+.player-ctn 
+{
+    width: 100%;
+}
+#btn-load-more 
+{
+    margin: 15px 0 60px 0;
+}
+}
