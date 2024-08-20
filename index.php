@@ -9,6 +9,7 @@ if(!$_SESSION["user_uid"]) $_SESSION["user_uid"] = rand(0, 10000) . "_" . time()
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1"/>
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <!-- <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script> -->
