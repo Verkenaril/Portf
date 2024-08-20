@@ -88,7 +88,7 @@ function getPlayerList(query)
     document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
     document.getElementById("content__results").innerHTML = "";
     
-    fetch(`http://83.222.11.85:7779/back/file/read.php?q=${query}`)
+    fetch(`http://83.222.11.85:7771/back/file/read.php?q=${query}`)
     .then(response => response.json())
     .then(tracks =>
         {
@@ -499,7 +499,6 @@ function previous()
 
 function returnBack_fn()
 {
-    document.getElementById("content").style.display = "none";
 
     player_audio.trackList = list1;
     if(!player_access.audio_tag.paused) playPause();
@@ -532,6 +531,7 @@ function returnBack_fn()
         <div id="content__animation"></div>
         <div id="content__results"></div>
         `; 
+        document.getElementById("content").style.display = "none";
     }, animate_duration);
     window.stop();
 }
@@ -566,7 +566,10 @@ function renderFindedTrackList(obj)
 
 function searchTrack()
 {
+
     getPlayerList(document.getElementById("search_inp").value);
+    
+    player_audio.trackList = list1;
 }
 
 function search_btn_fn()
@@ -630,7 +633,7 @@ async function addFavorite(e)
     document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
     document.getElementById("content__results").innerHTML = "";
 
-    await fetch(`http://83.222.11.85:7779/back/favorite/create.php?q=${query}`)
+    await fetch(`http://83.222.11.85:7771/back/favorite/create.php?q=${query}`)
     .then(res => res.json())
     .then(e => console.log(e));
     searchTrack();
@@ -652,7 +655,7 @@ async function delFavorite(e)
     let query = document.getElementById("n-" + num).innerHTML;
     document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
     document.getElementById("content__results").innerHTML = "";
-    await fetch(`http://83.222.11.85:7779/back/favorite/delete.php?q=${query}`);
+    await fetch(`http://83.222.11.85:7771/back/favorite/delete.php?q=${query}`);
     getFavoriteList();
 }
 
@@ -681,7 +684,7 @@ function getFavoriteList()
     document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
     document.getElementById("content__results").innerHTML = "";
 
-    fetch("http://83.222.11.85:7779/back/favorite/read.php")
+    fetch("http://83.222.11.85:7771/back/favorite/read.php")
     .then(res => res.json())
     .then(tracks =>
     { 
@@ -775,7 +778,7 @@ function send_file()
         formData.append(i, input_file.files[i]);
     }
 
-    fetch("http://83.222.11.85:7779/back/file/create.php",
+    fetch("http://83.222.11.85:7771/back/file/create.php",
         {
             method: "POST",
             body: formData
