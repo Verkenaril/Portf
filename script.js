@@ -570,6 +570,14 @@ function searchTrack()
     getPlayerList(document.getElementById("search_inp").value);
     
     player_audio.trackList = list1;
+    player_access.audio_tag.pause();
+    // if(!player_access.audio_tag.paused) playPause();
+    loadTrack(0);
+    player_access.currentTrack.track_progress.style.width = 0 + "%";
+    player_audio.different_info = currentTrackList;
+    player_audio.currentTrack.element = document.getElementById(player_audio.different_info.div_track + "-" + 0);
+    setCurrentTrackInPlayerAudio(player_audio.currentTrack.element);
+
 }
 
 function search_btn_fn()
