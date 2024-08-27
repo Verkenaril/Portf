@@ -45,7 +45,7 @@
     </div>  
         </a> 
     <div class="catalog__item">
-        <a href="#"><div class="catalog__img">
+        <a href="/work"><div class="catalog__img opacity-c">
             <img src="/img/catalog/TV.png">
         </div>
         <div class="catalog__name">
@@ -53,7 +53,7 @@
         </div></a>
     </div>  
     <div class="catalog__item">
-        <a href="#"><div class="catalog__img">
+        <a href="/work"><div class="catalog__img opacity-c">
             <img src="/img/catalog/wifi.jpg">
         </div>
         <div class="catalog__name">
@@ -61,7 +61,7 @@
         </div></a>
     </div>  
     <div class="catalog__item">
-        <a href="#"><div class="catalog__img">
+        <a href="/work"><div class="catalog__img opacity-c">
             <img src="/img/catalog/speakers.jpg">
         </div>
         <div class="catalog__name">
@@ -69,7 +69,7 @@
         </div></a>
     </div>  
     <div class="catalog__item">
-        <a href="#"><div class="catalog__img">
+        <a href="/work"><div class="catalog__img opacity-c">
             <img src="/img/catalog/microfone.jpg">
         </div>
         <div class="catalog__name">
@@ -77,7 +77,7 @@
         </div></a>
     </div>  
     <div class="catalog__item">
-        <a href="#"><div class="catalog__img">
+        <a href="/work"><div class="catalog__img opacity-c">
             <img src="/img/catalog/planschet.jpg">
         </div>
         <div class="catalog__name">
@@ -87,17 +87,17 @@
 </div>
 <div id="slider-company">
     <div id="slider-company__wrapper">
-        <img src="img/company/1.png">
-        <img src="img/company/2.png">
-        <img src="img/company/3.png">
-        <img src="img/company/4.png">
-        <img src="img/company/5.png">
-        <img src="img/company/6.png">
-        <img src="img/company/7.png">
-        <img src="img/company/8.png">
-        <img src="img/company/9.png">
-        <img src="img/company/10.png">
-        <img src="img/company/11.png">
+        <a href="/findbrand/dexp"><img src="img/company/1.png"></a>
+        <img src="img/company/2.png" class="opacity-c">
+        <img src="img/company/3.png" class="opacity-c">
+        <img src="img/company/4.png" class="opacity-c">
+        <img src="img/company/5.png" class="opacity-c">
+        <img src="img/company/6.png" class="opacity-c">
+        <img src="img/company/7.png" class="opacity-c">
+        <img src="img/company/8.png" class="opacity-c">
+        <img src="img/company/9.png" class="opacity-c">
+        <img src="img/company/10.png" class="opacity-c">
+        <img src="img/company/11.png" class="opacity-c">
     </div>
 </div>
 <div id="bonus_programm">

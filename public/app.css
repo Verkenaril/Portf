@@ -44,6 +44,10 @@ a
     height: 250px;
     display: inline;
 }
+.opacity-c
+{
+    opacity: 50%;
+}
 #nav
 {
     display: flex;
@@ -132,6 +136,11 @@ a
 #about__main
 {
     margin: 0 15px;
+}
+#about__main img
+{
+    margin: 10px auto;
+    display: block;
 }
 
 /* -------------------------career--------------------- */

@@ -22,6 +22,7 @@ Route::get("/", function() { return view("catalog");});
 Route::get("/catalog", function() { return view("catalog");});
 Route::get("/addsmartfony", function() { return view("addpage.addsmartfony");});
 
+Route::get("/findbrand/{brand}", [FindController::class, "indexbrand"]);
 Route::get("/findresult", [FindController::class, "index"]);
 Route::get("/secret", function() { return 1111; })->middleware(MyMiddleware::class);
 

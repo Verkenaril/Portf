@@ -41,6 +41,6 @@
         @endforeach
     @endif
 </div>
-{{ $data->links()}}
+{{ $data->links() }}
 </div>
 @endsection

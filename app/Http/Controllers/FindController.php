@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Support\Facades\DB;
+
 
 class FindController extends Controller
 {
@@ -15,5 +17,11 @@ class FindController extends Controller
 
         return view("findresult", ["data" => $data]);
     }
+    public function indexbrand(string $brand)
+    {
+        $columns = ["id", "price", "brand", "name", "picture", "raiting", "num_raiting"];
+        $data = Product::where("brand", "$brand")->paginate(4, $columns);
 
+        return view("findresult", ["data" => $data]);
+    }
 }
