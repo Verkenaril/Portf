@@ -1,0 +1,21 @@
+services:
+  nginx:
+    image: nginx
+    volumes: 
+      - ./:/var/www/
+      - ./_docker/nginx/conf.d/:/etc/nginx/conf.d
+    restart: always
+    ports: 
+      - "7773:80"
+    container_name: magaz_nginx
+
+
+  app:
+    build:
+      context: .
+      dockerfile: _docker/app/Dockerfile
+    restart: always
+    volumes:
+      - ./:/var/www
+      - ./_docker/app/php.ini:/usr/local/etc/php/php.ini
+    container_name: magaz_app
