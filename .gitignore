@@ -6,7 +6,7 @@
 /storage/framework
 /storage/logs
 /vendor
-.env
+
 .env.backup
 .env.production
 .phpactor.json
