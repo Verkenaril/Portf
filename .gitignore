@@ -6,7 +6,7 @@
 /storage/framework
 /storage/logs
 /vendor
-
+/resources/views/let title = document.js
 .env.backup
 .env.production
 .phpactor.json

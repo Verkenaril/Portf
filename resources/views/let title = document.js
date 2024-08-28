@@ -94,4 +94,4 @@ setTimeout(function()
 }, 300)
 
 
-../storage/ebook/5/eccacaa9215038634067fcb503b2bcf71a81f2d23cfe98d13da871c9e4a4ab90.jpg.webp
+../storage/smartfony/6/storage/app/public/smartfony/6/d2a93bde1fd2f17804b7470b3f18a75c98a9a93f1276657490851084e549958c.jpg.webp

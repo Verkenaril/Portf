@@ -88,6 +88,7 @@
 <div id="slider-company">
     <div id="slider-company__wrapper">
         <a href="/findbrand/dexp"><img src="img/company/1.png"></a>
+        <a href="/findbrand/samsung"><img src="img/company/9.png"></a>
         <img src="img/company/2.png" class="opacity-c">
         <img src="img/company/3.png" class="opacity-c">
         <img src="img/company/4.png" class="opacity-c">
@@ -95,9 +96,8 @@
         <img src="img/company/6.png" class="opacity-c">
         <img src="img/company/7.png" class="opacity-c">
         <img src="img/company/8.png" class="opacity-c">
-        <img src="img/company/9.png" class="opacity-c">
-        <img src="img/company/10.png" class="opacity-c">
         <img src="img/company/11.png" class="opacity-c">
+        <img src="img/company/10.png" class="opacity-c">
     </div>
 </div>
 <div id="bonus_programm">
