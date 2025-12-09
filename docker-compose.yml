@@ -28,7 +28,6 @@ services:
       dockerfile: _docker/app/Dockerfile
     volumes:
       - ./:/var/www/
-      - ./_docker/app/php.ini:/usr/local/etc/php/conf.d/php.ini
-      - ./sessi:/tmp    
+      - ./_docker/app/php.ini:/usr/local/etc/php/conf.d/php.ini   
     container_name: p_app
 
