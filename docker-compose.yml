@@ -9,6 +9,19 @@ services:
       - "7779:80"
     container_name: p_nginx
 
+  db:
+    image: mysql:8.0
+    restart: always
+    volumes:
+      - ./tmp/db:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: myvk
+      MYSQL_ROOT_PASSWORD: mypassnigga
+    ports:
+      - "7771:3306"  
+    container_name: project_db
+
+
   app:
     build:
       context: .
