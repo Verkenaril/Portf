@@ -15,7 +15,7 @@ services:
     volumes:
       - ./tmp/db:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: myvk
+      MYSQL_DATABASE: audiojs
       MYSQL_ROOT_PASSWORD: mypassnigga
     ports:
       - "7771:3306"  
