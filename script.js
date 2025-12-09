@@ -22,12 +22,6 @@ let list1 =
         duration: "04:33"
     },
     {
-        id: 3,
-        name: "Погасли свечи",
-        file: "files/Погасли свечи.mp3",
-        duration: "03:55"
-    },
-    {
         id: 1,
         name: "DaBro - Юность",
         file: "files/DaBro - Юность.mp3",
@@ -88,7 +82,7 @@ function getPlayerList(query)
     document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
     document.getElementById("content__results").innerHTML = "";
     
-    fetch(`http://83.222.11.85:7779/back/file/read.php?q=${query}`)
+    fetch(`http://217.199.253.101:7779//back/file/read.php?q=${query}`)
     .then(response => response.json())
     .then(tracks =>
         {
@@ -641,7 +635,7 @@ async function addFavorite(e)
     document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
     document.getElementById("content__results").innerHTML = "";
 
-    await fetch(`http://83.222.11.85:7779/back/favorite/create.php?q=${query}`)
+    await fetch(`http://217.199.253.101:7779/back/favorite/create.php?q=${query}`)
     .then(res => res.json())
     .then(e => console.log(e));
     searchTrack();
@@ -663,7 +657,7 @@ async function delFavorite(e)
     let query = document.getElementById("n-" + num).innerHTML;
     document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
     document.getElementById("content__results").innerHTML = "";
-    await fetch(`http://83.222.11.85:7779/back/favorite/delete.php?q=${query}`);
+    await fetch(`http://217.199.253.101:7779/back/favorite/delete.php?q=${query}`);
     getFavoriteList();
 }
 
@@ -692,7 +686,7 @@ function getFavoriteList()
     document.getElementById("content__animation").innerHTML = "<span class='loader'></span>";
     document.getElementById("content__results").innerHTML = "";
 
-    fetch("http://83.222.11.85:7779/back/favorite/read.php")
+    fetch("http://217.199.253.101:7779/back/favorite/read.php")
     .then(res => res.json())
     .then(tracks =>
     { 
@@ -786,7 +780,7 @@ function send_file()
         formData.append(i, input_file.files[i]);
     }
 
-    fetch("http://83.222.11.85:7779/back/file/create.php",
+    fetch("http://217.199.253.101:7779/back/file/create.php",
         {
             method: "POST",
             body: formData
