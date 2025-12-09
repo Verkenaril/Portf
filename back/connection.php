@@ -1,7 +1,7 @@
 <?php
 
 $connection;
-$servername = "83.222.11.85";
+$servername = "217.199.253.101";
 $options = 
 [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
