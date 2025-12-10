@@ -1,0 +1,35 @@
+#wrapper
+{
+    height: 10vw;
+}
+#page
+{
+    background-color: black;
+    height: 100vh;
+}
+#main
+{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+
+}
+.item
+{
+    margin-left: 25px;
+}
+.item img
+{
+    border: 1px solid grey;
+    border-radius: 25px;
+    width: 200px;
+}
+hr
+{
+    width: 100%;
+}
+p
+{
+    color: white;
+    font-size: 20px;
+}
