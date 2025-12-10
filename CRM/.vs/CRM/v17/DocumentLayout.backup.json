@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Proga\\C#\\CRM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{91AC3BCC-5DFE-4659-8933-92E42B3F67DB}|CRM\\CRM.csproj|d:\\proga\\c#\\crm\\crm\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{91AC3BCC-5DFE-4659-8933-92E42B3F67DB}|CRM\\CRM.csproj|solutionrelative:crm\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91AC3BCC-5DFE-4659-8933-92E42B3F67DB}|CRM\\CRM.csproj|D:\\Proga\\C#\\CRM\\crm\\viewmodels\\createcontactitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91AC3BCC-5DFE-4659-8933-92E42B3F67DB}|CRM\\CRM.csproj|solutionrelative:crm\\viewmodels\\createcontactitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91AC3BCC-5DFE-4659-8933-92E42B3F67DB}|CRM\\CRM.csproj|D:\\Proga\\C#\\CRM\\crm\\viewmodels\\loginregistrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91AC3BCC-5DFE-4659-8933-92E42B3F67DB}|CRM\\CRM.csproj|solutionrelative:crm\\viewmodels\\loginregistrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91AC3BCC-5DFE-4659-8933-92E42B3F67DB}|CRM\\CRM.csproj|D:\\Proga\\C#\\CRM\\crm\\views\\loginregistrationview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91AC3BCC-5DFE-4659-8933-92E42B3F67DB}|CRM\\CRM.csproj|solutionrelative:crm\\views\\loginregistrationview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91AC3BCC-5DFE-4659-8933-92E42B3F67DB}|CRM\\CRM.csproj|d:\\proga\\c#\\crm\\crm\\views\\loginregistrationview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{91AC3BCC-5DFE-4659-8933-92E42B3F67DB}|CRM\\CRM.csproj|solutionrelative:crm\\views\\loginregistrationview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\Proga\\C#\\CRM\\CRM\\App.xaml",
+              "RelativeDocumentMoniker": "CRM\\App.xaml",
+              "ToolTip": "D:\\Proga\\C#\\CRM\\CRM\\App.xaml*",
+              "RelativeToolTip": "CRM\\App.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-10T17:27:35.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginRegistrationView.xaml",
+              "DocumentMoniker": "D:\\Proga\\C#\\CRM\\CRM\\Views\\LoginRegistrationView.xaml",
+              "RelativeDocumentMoniker": "CRM\\Views\\LoginRegistrationView.xaml",
+              "ToolTip": "D:\\Proga\\C#\\CRM\\CRM\\Views\\LoginRegistrationView.xaml",
+              "RelativeToolTip": "CRM\\Views\\LoginRegistrationView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-08T20:29:42.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginRegistrationView.xaml.cs",
+              "DocumentMoniker": "D:\\Proga\\C#\\CRM\\CRM\\Views\\LoginRegistrationView.xaml.cs",
+              "RelativeDocumentMoniker": "CRM\\Views\\LoginRegistrationView.xaml.cs",
+              "ToolTip": "D:\\Proga\\C#\\CRM\\CRM\\Views\\LoginRegistrationView.xaml.cs",
+              "RelativeToolTip": "CRM\\Views\\LoginRegistrationView.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T16:39:00.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginRegistrationViewModel.cs",
+              "DocumentMoniker": "D:\\Proga\\C#\\CRM\\CRM\\ViewModels\\LoginRegistrationViewModel.cs",
+              "RelativeDocumentMoniker": "CRM\\ViewModels\\LoginRegistrationViewModel.cs",
+              "ToolTip": "D:\\Proga\\C#\\CRM\\CRM\\ViewModels\\LoginRegistrationViewModel.cs",
+              "RelativeToolTip": "CRM\\ViewModels\\LoginRegistrationViewModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAIA4wB4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T16:26:50.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateContactItemViewModel.cs",
+              "DocumentMoniker": "D:\\Proga\\C#\\CRM\\CRM\\ViewModels\\CreateContactItemViewModel.cs",
+              "RelativeDocumentMoniker": "CRM\\ViewModels\\CreateContactItemViewModel.cs",
+              "ToolTip": "D:\\Proga\\C#\\CRM\\CRM\\ViewModels\\CreateContactItemViewModel.cs",
+              "RelativeToolTip": "CRM\\ViewModels\\CreateContactItemViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T21:23:04.52Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

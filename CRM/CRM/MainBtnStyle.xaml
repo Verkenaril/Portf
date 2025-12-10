@@ -1,0 +1,85 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="btn_style" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button" >
+                    <Border Padding="10, 0, 10, 0" Background="{TemplateBinding Background}">
+                        <ContentPresenter  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard TargetProperty="Background.Color">
+                            <ColorAnimation From="#435fe5" To="White" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard>
+                        <Storyboard TargetProperty="Foreground.Color">
+                            <ColorAnimation From="White" To="#435fe5" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard TargetProperty="Background.Color">
+                            <ColorAnimation From="White" To="#435fe5" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard>
+                        <Storyboard TargetProperty="Foreground.Color">
+                            <ColorAnimation From="#435fe5" To="White" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="btn_style_del" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button" >
+                    <Border Padding="10, 0, 10, 0" Background="{TemplateBinding Background}">
+                        <ContentPresenter  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard TargetProperty="Background.Color">
+                            <ColorAnimation From="Red" To="White" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard>
+                        <Storyboard TargetProperty="Foreground.Color">
+                            <ColorAnimation From="White" To="Red" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard TargetProperty="Background.Color">
+                            <ColorAnimation From="White" To="Red" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard>
+                        <Storyboard TargetProperty="Foreground.Color">
+                            <ColorAnimation From="Red" To="White" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
